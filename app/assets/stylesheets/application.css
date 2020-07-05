@@ -52,10 +52,21 @@ header{
 	z-index: 999;
 }
 header p {
- 		font-size: 1.3em;
- 		line-height: 40px;
- 		font-family: sans-serif;
- 		color: #ec008c;
+ 	font-size: 1.3em;
+ 	line-height: 40px;
+ 	font-family: sans-serif;
+ 	color: #ec008c;
+}
+header a {
+	text-decoration: none;
+ 	font-size: 0.8em;
+ 	line-height: 40px;
+ 	font-family: sans-serif;
+ 	color: #ec008c;
+}
+header a:hover{
+	text-decoration: none;
+ 	color: #ec008c;
 }
 .articles{
 	display: flex;

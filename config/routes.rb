@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 	
+  devise_for :users
 	get "/sports", to:  "home#sports"
 	get "/business", to:  "home#business"
 	get "/health", to:  "home#health"

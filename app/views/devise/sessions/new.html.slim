@@ -1,0 +1,61 @@
+center
+  .login
+    h2.text-center Login
+    .mt-3
+    center
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email"
+        .field
+          = f.password_field :password, autocomplete: "current-password", placeholder: "Password"
+        .actions.mt-3
+          = f.submit "Log in"
+        .mt-3
+          = render "devise/shared/links"
+
+
+css:
+  body{
+    background: #ec008c;
+    background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
+    background: linear-gradient(to right, #fc6767, #ec008c);
+  }
+  .login{
+    background: white;
+    width: 20%;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .login h2{
+    font-weight: 200;
+  }
+  input[type="email"],input[type="password"]{
+    background: #f2f2f2;
+    width: 90%;
+    margin: 3% 5%;
+    border: none;
+    border-radius: 10px;
+    padding: 2% 2%;
+    color: #333;
+  }
+  input[type="submit"]{
+    display: inline-block;
+    background: #ec008c;
+    background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
+    background: linear-gradient(to right, #fc6767, #ec008c);
+    color: #fff;
+    padding: 2% 0;
+    border-radius: 20px;
+    border: none;
+    width: 50%;
+    margin: 0 25%;
+    cursor: pointer;
+  }
+  .login a {
+    color: #ec008c;
+    text-decoration: none;
+  }
+
