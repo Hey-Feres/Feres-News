@@ -1,1 +1,40 @@
-h1 Sports
+.cover
+	.cover-title
+		h1 Sports
+.news
+	.articles
+		center
+			.row
+				- @news.each do |news|
+					.col-lg-3.col-md-4.col-sm-12.mb-3
+						.article
+							div
+								a href="#{news['url']}" target="blank"
+									img.thumb src="#{news['urlToImage']}"
+									p.title= news['title']
+							div
+								a href="#{news['url']}" target="blank"
+									button.read Read
+css:
+	.cover{
+		width: 100%;
+		height: 200px;
+		top: 0;
+		left: 0;
+		position: absolute;
+		background: #ec008c;
+		background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
+		background: linear-gradient(to right, #fc6767, #ec008c);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 0 2%;
+		color: white;
+	}
+	.cover-title{
+		display: flex;
+		justify-content: flex-start;
+	}
+	.news{
+		margin-top: 170px !important;
+	}

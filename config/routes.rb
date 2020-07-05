@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	
 	get "/sports", to:  "home#sports"
 	get "/business", to:  "home#business"
 	get "/health", to:  "home#health"
