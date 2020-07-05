@@ -5,6 +5,40 @@ header.d-flex.justify-content-between
 .topBar
 	h3.thin= @isMorning ? "Good Morning, #{current_user.name}" : "Good Afternoom, Bruno"
 	input.search type="text" placeholder="Search News"
+input.search-mobile type="text" placeholder="Search News"
+.categories-mobile
+	.row
+		.col-6.mb-4
+			= link_to sports_path do 
+				.category.mr-4.ml-4
+					center
+						img src="https://img.icons8.com/ios/60/FFFFFF/volleyball-2.png"
+		.col-6.mb-4
+			= link_to business_path do 
+				.category.mr-4.ml-4
+					center
+						img src="https://img.icons8.com/ios/60/FFFFFF/business.png"
+		.col-6.mb-4
+			= link_to health_path do 
+				.category.mr-4.ml-4
+					center
+						img src="https://img.icons8.com/ios/60/FFFFFF/like.png"
+		.col-6.mb-4
+			= link_to entertainment_path do 
+				.category.mr-4.ml-4
+					center
+						img src="https://img.icons8.com/ios/60/FFFFFF/clapperboard.png"
+		.col-6.mb-4
+			= link_to science_path do 
+				.category.mr-4.ml-4
+					center
+						img src="https://img.icons8.com/ios/60/FFFFFF/physics.png"
+		.col-6.mb-4
+			= link_to technology_path do 
+				.category.mr-4.ml-4
+					center
+						img src="https://img.icons8.com/ios/60/FFFFFF/mouse.png"
+
 .categories
 	= link_to sports_path do 
 		.category.mr-4.ml-4
@@ -72,5 +106,8 @@ javascript:
 		home = new Home()
 		$(".search").change(function(){
 			home.search( $(".search").val() )
+		})
+		$(".search-mobile").change(function(){
+			home.search( $(".search-mobile").val() )
 		})
 	})

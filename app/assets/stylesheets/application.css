@@ -24,6 +24,12 @@ body{
 	justify-content: flex-start;
 	padding: 0 4%;
 }
+.categories-mobile{
+	display: flex;
+	justify-content: flex-start;
+	padding: 0 4%;
+	display: none;
+}
 .categories a{
 	text-decoration: none;
 	color: #333;
@@ -123,6 +129,11 @@ header a:hover{
 	border-radius: 10px;
 	padding: 0 1%;
 }
+.search-mobile{
+	border: none;
+	border-radius: 10px;	
+	display: none;
+}
 .loader{
   width: 100px;
   height: 100px;
@@ -179,5 +190,28 @@ header a:hover{
 .cover-title{
 	display: flex;
 	justify-content: flex-start;
+}
+@media only screen and (max-width: 600px) {
+	body {
+		margin-top: 10%;
+	}
+	.topBar h3{
+		font-size: 1.5em;
+	}
+	.categories{
+		display: none;
+	}
+	.search{
+		display: none;
+	}
+	.categories-mobile{
+		display: block;
+	}
+	.search-mobile{
+		display: block;
+		width: 95%;
+		margin: 0 2.5% 4% 2.5%;
+		padding: 2%
+	}
 }
 
