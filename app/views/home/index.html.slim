@@ -1,36 +1,36 @@
-header.d-flex.justify-content-between
+header.d-flex.justify-content-between.animated.slideInDown
 	p Feres News
 	p= link_to "SignOut", destroy_user_session_path, method: :delete
 
 .topBar
-	h3.thin= @saudation
-	input.search type="text" placeholder="Search News"
-input.search-mobile type="text" placeholder="Search News"
+	h3.thin.animated.fadeInLeftBig= @saudation
+	input.search.animated.fadeInRightBig type="text" placeholder="Search News"
+input.search-mobile.animated.fadeInRightBig type="text" placeholder="Search News"
 .categories-mobile
 	.row
 		- @categories.each do |category|
 			.col-6.mb-4
 				= link_to category[:path] do 
-					.category.mr-4.ml-4
+					.category.mr-4.ml-4.animated.zoomIn
 						center
 							img src="#{category[:iconSrc]}"
 
 .categories
 	- @categories.each do |category|
 		= link_to category[:path] do 
-			.category.mr-4.ml-4
+			.category.mr-4.ml-4.animated.zoomIn
 				center
 					img src="#{category[:iconSrc]}"
 			p.text-center= category[:name]
 
 .news.mt-5
-	h4.thin.ml-3.mr-3.mb-4 US Top Headlines
+	h4.thin.ml-3.mr-3.mb-4.animated.fadeInLeftBig US Top Headlines
 	.articles
 		center
 			.row
 				- 4.times do |i|
 					.col-lg-3.col-md-4.col-sm-12.mb-3
-						.article
+						.article.animated.fadeInUpBig
 							div
 								a href="#{@usHeadLines['articles'][i]['url']}" target="blank"
 									img.thumb src="#{@usHeadLines['articles'][i]['urlToImage']}"
@@ -39,13 +39,13 @@ input.search-mobile type="text" placeholder="Search News"
 								a href="#{@usHeadLines['articles'][i]['url']}" target="blank"
 									button.read Read
 	.mt-5
-	h4.thin.ml-3.mr-3.mb-4 Brazil Top Headlines
+	h4.thin.ml-3.mr-3.mb-4.animated.fadeInLeftBig Brazil Top Headlines
 	.articles
 		center
 			.row
 				- 4.times do |i|
 					.col-lg-3.col-md-4.col-sm-12.mb-3
-						.article
+						.article.animated.fadeInUpBig
 							div
 								a href="#{@brHeadLines['articles'][i]['url']}" target="blank"
 									img.thumb src="#{@brHeadLines['articles'][i]['urlToImage']}"
