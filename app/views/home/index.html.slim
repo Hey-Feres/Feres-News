@@ -3,7 +3,7 @@ header.d-flex.justify-content-between
 	p= link_to "SignOut", destroy_user_session_path, method: :delete
 
 .topBar
-	h3.thin= @isMorning ? "Good Morning, #{current_user.name}" : "Good Afternoom, Bruno"
+	h3.thin= @saudation
 	input.search type="text" placeholder="Search News"
 input.search-mobile type="text" placeholder="Search News"
 .categories-mobile
