@@ -22,3 +22,9 @@
 	background-color: #000;
 	color: white;
 }
+.darkBody footer{
+	background-color: rgba(0,0,0,0.7) !important;
+}
+.darkBody footer p {
+	color: white !important;	
+}
