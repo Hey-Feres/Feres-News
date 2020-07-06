@@ -28,7 +28,12 @@ body{
 /* Header Styles .  .  .  .  .  .  .  .  .  .  .  */
 header{
 	width: 100%;
-	background: #fff;
+	backdrop-filter: blur(5px);
+  	-webkit-backdrop-filter: blur(10px);
+  	-moz-backdrop-filter: blur(10px);
+  	-ms-backdrop-filter: blur(10px);
+  	-o-backdrop-filter: blur(10px);
+	background: rgba(255,255,255,0.7);
 	position: fixed;
 	top: 0;
 	left: 0;
