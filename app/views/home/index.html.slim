@@ -8,68 +8,20 @@ header.d-flex.justify-content-between
 input.search-mobile type="text" placeholder="Search News"
 .categories-mobile
 	.row
-		.col-6.mb-4
-			= link_to "/category/sports" do 
-				.category.mr-4.ml-4
-					center
-						img src="https://img.icons8.com/ios/60/FFFFFF/volleyball-2.png"
-		.col-6.mb-4
-			= link_to "/category/business" do
-				.category.mr-4.ml-4
-					center
-						img src="https://img.icons8.com/ios/60/FFFFFF/business.png"
-		.col-6.mb-4
-			= link_to "/category/health" do
-				.category.mr-4.ml-4
-					center
-						img src="https://img.icons8.com/ios/60/FFFFFF/like.png"
-		.col-6.mb-4
-			= link_to "/category/entertainment" do
-				.category.mr-4.ml-4
-					center
-						img src="https://img.icons8.com/ios/60/FFFFFF/clapperboard.png"
-		.col-6.mb-4
-			= link_to "/category/science" do 
-				.category.mr-4.ml-4
-					center
-						img src="https://img.icons8.com/ios/60/FFFFFF/physics.png"
-		.col-6.mb-4
-			= link_to "/category/technology" do 
-				.category.mr-4.ml-4
-					center
-						img src="https://img.icons8.com/ios/60/FFFFFF/mouse.png"
+		- @categories.each do |category|
+			.col-6.mb-4
+				= link_to category[:path] do 
+					.category.mr-4.ml-4
+						center
+							img src="#{category[:iconSrc]}"
 
 .categories
-	= link_to "/category/sports" do 
-		.category.mr-4.ml-4
-			center
-				img src="https://img.icons8.com/ios/60/FFFFFF/volleyball-2.png"
-		p.text-center Sports
-	= link_to "/category/business" do 
-		.category.mr-4.ml-4
-			center
-				img src="https://img.icons8.com/ios/60/FFFFFF/business.png"
-		p.text-center Business
-	= link_to "/category/health" do 
-		.category.mr-4.ml-4
-			center
-				img src="https://img.icons8.com/ios/60/FFFFFF/like.png"
-		p.text-center Health
-	= link_to "/category/entertainment" do 
-		.category.mr-4.ml-4
-			center
-				img src="https://img.icons8.com/ios/60/FFFFFF/clapperboard.png"
-		p.text-center Entertainment
-	= link_to "/category/science" do
-		.category.mr-4.ml-4
-			center
-				img src="https://img.icons8.com/ios/60/FFFFFF/physics.png"
-		p.text-center Science
-	= link_to "/category/technology" do 
-		.category.mr-4.ml-4
-			center
-				img src="https://img.icons8.com/ios/60/FFFFFF/mouse.png"
-		p.text-center Technology
+	- @categories.each do |category|
+		= link_to category[:path] do 
+			.category.mr-4.ml-4
+				center
+					img src="#{category[:iconSrc]}"
+			p.text-center= category[:name]
 
 .news.mt-5
 	h4.thin.ml-3.mr-3.mb-4 US Top Headlines
