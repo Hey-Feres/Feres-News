@@ -1,6 +1,9 @@
 header.d-flex.justify-content-between.animated.slideInDown
 	p Feres News
-	p#signOut= link_to "SignOut", destroy_user_session_path, method: :delete
+	.d-flex.justify-content-end
+		p#signOut= link_to "SignOut", destroy_user_session_path, method: :delete
+		p.ml-5#about style="cursor: pointer"
+			img src="https://img.icons8.com/ios/25/EC008C/info.png"
 
 .topBar
 	h3.thin.animated.fadeInLeftBig= @saudation
@@ -54,13 +57,32 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="Search News
 							div
 								a href="#{@brHeadLines['articles'][i]['url']}" target="blank"
 									button.read Read
+= render 'about'
+
 javascript:
 	$(document).ready(function(){
 		home = new Home()
+		home.loaded()
 		$(".search").change(function(){
 			home.search( $(".search").val() )
 		})
 		$(".search-mobile").change(function(){
 			home.search( $(".search-mobile").val() )
 		})
+		$("#about").click(function(){
+			$(".AboutFeresNews").show()
+			$(".AboutFeresNews").addClass("animated fadeInRightBig")
+			window.setTimeout(function(){
+				$(".AboutFeresNews").removeClass("animated fadeInRightBig")		
+			}, 800);
+		})
+		$("#closeAbout").click(function(){
+			$(".AboutFeresNews").addClass("animated fadeOutRightBig")
+			window.setTimeout(function(){
+				$(".AboutFeresNews").hide()
+				$(".AboutFeresNews").removeClass("animated fadeOutRightBig")
+			}, 800);
+		})
 	})
+
+

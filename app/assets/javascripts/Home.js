@@ -2,6 +2,11 @@ class Home {
 	constructor() {
 		
 	}
+
+	loaded(){
+		$(".AboutFeresNews").hide()
+	}
+
 	search(params){
 		$(".categories-mobile").html("")
 		$(".news").html("")
