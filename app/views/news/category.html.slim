@@ -1,0 +1,21 @@
+.cover
+	.cover-title
+		h1= @categoryName
+.news
+	.articles
+		center
+			.row
+				- @news.each do |news|
+					.col-lg-3.col-md-4.col-sm-12.mb-3
+						.article
+							div
+								a href="#{news['url']}" target="blank"
+									img.thumb src="#{news['urlToImage']}"
+									p.title= news['title']
+							div
+								a href="#{news['url']}" target="blank"
+									button.read Read
+css:
+	.news{
+		margin-top: 170px !important;
+	}

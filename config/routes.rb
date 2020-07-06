@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
-	
-  devise_for :users
-	get "/sports", to:  "home#sports"
-	get "/business", to:  "home#business"
-	get "/health", to:  "home#health"
-	get "/entertainment", to:  "home#entertainment"
-	get "/science", to:  "home#science"
-	get "/technology", to:  "home#technology"
-
+  	devise_for :users
+  	
+	get "/category/:category", to: "news#category"
 	root "home#index"
 end

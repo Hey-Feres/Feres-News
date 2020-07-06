@@ -1,26 +1,7 @@
 class NewsController < ApplicationController
-	def sports
-		requestNews "sports"
-	end
-
-	def business
-		requestNews "business"
-	end	
-
-	def health
-		requestNews "health"
-	end
-
-	def entertainment
-		requestNews "entertainment"
-	end
-
-	def science
-		requestNews "science"
-	end
-
-	def technology
-		requestNews "technology"
+	def category
+		requestNews params[:category]
+		@categoryName = params[:category].capitalize!
 	end
 
 	private
