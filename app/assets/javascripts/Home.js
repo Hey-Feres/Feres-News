@@ -3,6 +3,7 @@ class Home {
 		
 	}
 	search(params){
+		$(".categories-mobile").html("")
 		$(".news").html("")
 		$(".news").html('<div class="loader" id="loader"><span></span><span></span><span></span></div>')
 		

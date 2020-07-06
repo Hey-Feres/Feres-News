@@ -1,19 +1,20 @@
 header.d-flex.justify-content-between.animated.slideInDown
 	p Feres News
-	p= link_to "SignOut", destroy_user_session_path, method: :delete
+	p#signOut= link_to "SignOut", destroy_user_session_path, method: :delete
 
 .topBar
 	h3.thin.animated.fadeInLeftBig= @saudation
 	input.search.animated.fadeInRightBig type="text" placeholder="Search News"
 input.search-mobile.animated.fadeInRightBig type="text" placeholder="Search News"
 .categories-mobile
-	.row
-		- @categories.each do |category|
-			.col-6.mb-4
-				= link_to category[:path] do 
-					.category.mr-4.ml-4.animated.zoomIn
-						center
-							img src="#{category[:iconSrc]}"
+	center
+		.row
+			- @categories.each do |category|
+				.col-6.mb-4
+					= link_to category[:path] do 
+						.category.mr-4.ml-4.animated.zoomIn
+							center
+								img src="#{category[:iconSrc]}"
 
 .categories
 	- @categories.each do |category|

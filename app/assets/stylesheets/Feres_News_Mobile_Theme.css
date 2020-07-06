@@ -20,7 +20,7 @@
 		font-size: 1.5em;
 	}
 	.categories{
-		display: none;
+		display: none !important;
 	}
 	.search{
 		display: none;

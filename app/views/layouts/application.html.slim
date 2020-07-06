@@ -20,3 +20,18 @@ css:
     color: white;
     text-align: center;
   }
+
+javascript:
+  $(document).ready(function(){
+    app = new App()
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      app.switchToDarkMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if(e.matches){        
+        app.switchToDarkMode()
+      }else{
+        app.switchToLightMode()
+      }
+    });
+  })

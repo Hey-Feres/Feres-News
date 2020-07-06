@@ -1,0 +1,24 @@
+.darkBody{
+	background-color: #111;
+	color: white;
+}
+.darkBody .categories a, .darkBody .categories-mobile a {
+	color: white !important;
+}
+.darkBody #signOut{
+	color: #ec008c !important;
+}
+.darkBody header{
+	background-color: rgba(0,0,0,0.7);
+}
+.darkBody .article{
+	background: #000;
+	box-shadow: 0 0 0 0 transparent;
+}
+.darkBody .article a {
+	color: white;
+}
+.darkBody .search, .darkBody .search-mobile{
+	background-color: #000;
+	color: white;
+}
