@@ -1,0 +1,37 @@
+/* Categories Styles .  .  .  .  .  .  .  .  .  .  . */
+.categories-mobile{
+	display: flex;
+	justify-content: flex-start;
+	padding: 0 4%;
+	display: none;
+}
+/* Search Input Styles .  .  .  .  .  .  .  .  .  .  */
+.search-mobile{
+	border: none;
+	border-radius: 10px;	
+	display: none;
+}
+/* Mobile Adapted Styles .  .  .  .  .  .  .  .  .  .*/
+@media only screen and (max-width: 600px) {
+	body {
+		margin-top: 10%;
+	}
+	.topBar h3{
+		font-size: 1.5em;
+	}
+	.categories{
+		display: none;
+	}
+	.search{
+		display: none;
+	}
+	.categories-mobile{
+		display: block;
+	}
+	.search-mobile{
+		display: block;
+		width: 95%;
+		margin: 0 2.5% 4% 2.5%;
+		padding: 2%
+	}
+}
