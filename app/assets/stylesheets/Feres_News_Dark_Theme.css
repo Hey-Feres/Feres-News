@@ -28,3 +28,6 @@
 .darkBody footer p {
 	color: white !important;	
 }
+.darkBody .login h2, .darkBody .signup h2{
+	color: #111;
+}
