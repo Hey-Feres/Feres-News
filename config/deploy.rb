@@ -39,9 +39,8 @@ set :keep_releases, 5
 set :log_level, :debug
 
 after 'deploy:finished', 'deploy:restart'
-
-namespace :deploy do task 
-	:restart do
+namespace :deploy do 
+	task:restart do
 		invoke 'unicorn:stop'
 		invoke 'unicorn:start'
 	end
