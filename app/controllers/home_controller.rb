@@ -13,7 +13,12 @@ class HomeController < ApplicationController
 
 		def homeScreenSaudation
 			isMorning = (0..11).include?(Time.now.hour) ? true : false
-			@saudation = isMorning ? "Good Morning, #{current_user.name}" : "Good Afternoom, #{current_user.name}"
+			@saudation = nil
+			if current_user
+				@saudation = isMorning ? "Good Morning, #{current_user.name}" : "Good Afternoom, #{current_user.name}"
+			else
+				@saudation = isMorning ? "Good Morning" : "Good Afternoom"
+			end
 		end
 
 		def availableCategories

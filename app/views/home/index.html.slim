@@ -1,10 +1,12 @@
 header.d-flex.justify-content-between.animated.slideInDown
 	p Feres News
 	.d-flex.justify-content-end
-		p#signOut= link_to "SignOut", destroy_user_session_path, method: :delete
+		- if current_user
+			p#signOut= link_to "SignOut", destroy_user_session_path, method: :delete
+		- else
+			p#signOut= link_to "SignIn", new_user_session
 		/p.ml-5#about style="cursor: pointer"
 			img src="https://img.icons8.com/ios/25/EC008C/info.png"
-
 .topBar
 	h3.thin.animated.fadeInLeftBig= @saudation
 	input.search.animated.fadeInRightBig type="text" placeholder="Search News"
