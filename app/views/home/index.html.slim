@@ -4,7 +4,7 @@ header.d-flex.justify-content-between.animated.slideInDown
 		- if current_user
 			p#signOut= link_to "SignOut", destroy_user_session_path, method: :delete
 		- else
-			p#signOut= link_to "SignIn", new_user_session
+			p#signOut= link_to "SignIn", new_user_session_path
 		/p.ml-5#about style="cursor: pointer"
 			img src="https://img.icons8.com/ios/25/EC008C/info.png"
 .topBar
