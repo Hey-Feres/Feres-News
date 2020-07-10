@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
 	def category
 		requestNews params[:category]
-		@categoryName = params[:category].capitalize!
+		@categoryName = "#{translate "home.#{params[:category]}"}"
 	end
 	
 	def search
@@ -11,10 +11,10 @@ class NewsController < ApplicationController
 
 	private
 		def requestNews category
-			@news = HTTParty.get("https://newsapi.org/v2/everything?q=#{category}&apiKey=#{Rails.application.credentials.news_api_key}").parsed_response['articles']
+			@news = HTTParty.get("https://newsapi.org/v2/everything?q=#{category}&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}").parsed_response['articles']
 		end
 
 		def searchNews date, searchParam
-			return HTTParty.get("http://newsapi.org/v2/everything?q=#{searchParam}&from=#{date}&sortBy=popularity&language=en&apiKey=#{Rails.application.credentials.news_api_key}")
+			return HTTParty.get("http://newsapi.org/v2/everything?q=#{searchParam}&from=#{date}&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
 		end
 end

@@ -1,16 +1,19 @@
 header.d-flex.justify-content-between.animated.slideInDown
 	p Feres News
 	.d-flex.justify-content-end
+		/a href="#{@locale[:path]}"
+			p.mr-5
+				img src="https://img.icons8.com/color/25/000000/#{@locale[:flag]}.png"
 		- if current_user
-			p#signOut= link_to "SignOut", destroy_user_session_path, method: :delete
+			p#signOut= link_to "#{translate 'auth.signOut'}", destroy_user_session_path, method: :delete
 		- else
-			p#signOut= link_to "SignIn", new_user_session_path
+			p#signOut= link_to "#{translate 'auth.signIn'}", new_user_session_path
 		/p.ml-5#about style="cursor: pointer"
 			img src="https://img.icons8.com/ios/25/EC008C/info.png"
 .topBar
 	h3.thin.animated.fadeInLeftBig= @saudation
-	input.search.animated.fadeInRightBig type="text" placeholder="Search News"
-input.search-mobile.animated.fadeInRightBig type="text" placeholder="Search News"
+	input.search.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
+input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
 .categories-mobile
 	center
 		.row
@@ -29,8 +32,8 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="Search News
 					img src="#{category[:iconSrc]}"
 			p.text-center= category[:name]
 
-.news.mt-5
-	h4.thin.ml-3.mr-3.mb-4.animated.fadeInLeftBig US Top Headlines
+.news.mt-5.mb-5
+	h4.thin.ml-3.mr-3.mb-4.animated.fadeInLeftBig= translate 'home.title'
 	.articles
 		center
 			.row
@@ -38,28 +41,14 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="Search News
 					.col-lg-3.col-md-4.col-sm-12.mb-3
 						.article.animated.fadeInUpBig
 							div
-								a href="#{@usHeadLines['articles'][i]['url']}" target="blank"
-									img.thumb src="#{@usHeadLines['articles'][i]['urlToImage']}"
-									p.title= @usHeadLines['articles'][i]['title']
+								a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
+									img.thumb src="#{@topHeadlines['articles'][i]['urlToImage']}"
+									p.title= @topHeadlines['articles'][i]['title']
 							div
-								a href="#{@usHeadLines['articles'][i]['url']}" target="blank"
-									button.read Read
-	.mt-5
-	h4.thin.ml-3.mr-3.mb-4.animated.fadeInLeftBig Brazil Top Headlines
-	.articles
-		center
-			.row
-				- 8.times do |i|
-					.col-lg-3.col-md-4.col-sm-12.mb-3
-						.article.animated.fadeInUpBig
-							div
-								a href="#{@brHeadLines['articles'][i]['url']}" target="blank"
-									img.thumb src="#{@brHeadLines['articles'][i]['urlToImage']}"
-									p.title= @brHeadLines['articles'][i]['title']
-							div
-								a href="#{@brHeadLines['articles'][i]['url']}" target="blank"
-									button.read Read
-= render 'about'
+								a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
+									button.read= translate 'home.read'
+
+/= render 'about'
 
 javascript:
 	$(document).ready(function(){

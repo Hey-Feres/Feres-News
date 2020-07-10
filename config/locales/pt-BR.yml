@@ -1,0 +1,16 @@
+pt-BR:
+  home:
+    morning_saudation: Bom Dia
+    afternoon_saudation: Boa Tarde
+    search_placeholder: Buscar Noticias
+    title: Destaques
+    sports: Esportes
+    business: Negócios
+    health: Saúde
+    entertainment: Entretenimento
+    science: Ciência
+    technology: Tecnologia
+    read: Leia
+  auth:
+    signIn: Acessar
+    signOut: Sair
