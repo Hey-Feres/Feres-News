@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   	
 	get "/category/:category", to: "news#category"
 	post "/search", to: "news#search"
+	post "/swicth_language", to: "application#swicth_language"
 	root "home#index"
 end

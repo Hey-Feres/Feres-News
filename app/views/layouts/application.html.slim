@@ -1,38 +1,39 @@
 doctype html
 html
-  head
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
-    title News
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
-  body
-    - if notice
-      p.notice= notice
-    - if alert
-      p.alert= alert
-    = yield
-    /footer
-      p Made with ❤️ in Brazil
+    head
+        meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+        title News
+        = csrf_meta_tags
+        = csp_meta_tag
+        = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+        = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+        meta name="viewport" content="width=device-width, initial-scale=1.0"
+    body
+        - if notice
+          p.notice= notice
+        - if alert
+          p.alert= alert
+        = yield
+        /footer
+            p Made with ❤️ in Brazil
 css:
-  .alert, .notice {
-    color: white;
-    text-align: center;
-  }
+    .alert, .notice {
+        color: white;
+        text-align: center;
+    }
 
 javascript:
-  $(document).ready(function(){
-    app = new App()
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      app.switchToDarkMode()
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-      if(e.matches){        
-        app.switchToDarkMode()
-      }else{
-        app.switchToLightMode()
-      }
-    });
-  })
+    $(document).ready(function(){
+        app = new App()
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            app.switchToDarkMode()
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+            if(e.matches){        
+                app.switchToDarkMode()
+            }else{
+                app.switchToLightMode()
+            }
+        })
+        app.getLocation()
+    })

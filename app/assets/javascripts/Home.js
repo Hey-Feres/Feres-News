@@ -1,20 +1,18 @@
-class Home {
-	constructor(base_url) {
-		this.base_url = base_url;
+class Home extends App {
+	constructor() {
+		super();
 	}
-
 	loaded(){
 		$(".AboutFeresNews").hide()
 	}
-
 	search(params){
 		$(".categories-mobile").html("")
 		$(".news").html("")
 		$(".news").html('<div class="loader" id="loader"><span></span><span></span><span></span></div>')
 		let today = new Date()
-		today = today.getFullYear() + "-" + ("0" + today.getMonth()).slice(-2) + "-" + ("0" + today.getDate()).slice(-2)		
+		today = today.getFullYear() + "-" + ("0" + today.getMonth()).slice(-2) + "-" + ("0" + today.getDate()).slice(-2)
 		let request = new Request()
-		let url = this.base_url + "/search"
+		let url = "/search"
 		let data = { date: today, search_param: params }
 		let successCallback = data => {
 			console.log(data)
