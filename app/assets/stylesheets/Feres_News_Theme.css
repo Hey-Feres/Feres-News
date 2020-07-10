@@ -1,6 +1,6 @@
 /* Generic Styles .  .  .  .  .  .  .  .  .  .  . */
 body{
-	background-color: #f2f2f2;
+	background-color: var(--light-mode-background);
 	font-family: sans-serif;
 	padding-top: 5%;
 }
@@ -21,9 +21,9 @@ body{
 	height: 100px;
 	padding: 20px 0;
 	border-radius: 50%;
-	background: #ec008c;
-	background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
-	background: linear-gradient(to right, #fc6767, #ec008c);
+	background: var(--secondary);
+	background: -webkit-linear-gradient(to right, var(--primary), var(--secondary));
+	background: linear-gradient(to right, var(--primary), var(--secondary));
 }
 /* Header Styles .  .  .  .  .  .  .  .  .  .  .  */
 header{
@@ -45,18 +45,18 @@ header p {
  	font-size: 1.3em;
  	line-height: 40px;
  	font-family: sans-serif;
- 	color: #ec008c;
+ 	color: var(--secondary);
 }
 header a {
 	text-decoration: none;
  	font-size: 0.8em;
  	line-height: 40px;
  	font-family: sans-serif;
- 	color: #ec008c;
+ 	color: var(--secondary);
 }
 header a:hover{
 	text-decoration: none;
- 	color: #ec008c;
+ 	color: var(--secondary);
 }
 /* Articles Styles .  .  .  .  .  .  .  .  .  .  .*/
 .articles{
@@ -93,9 +93,9 @@ header a:hover{
 }
 .read {
   	display: inline-block;
-	background: #ec008c;
-	background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
-	background: linear-gradient(to right, #fc6767, #ec008c);
+	background: var(--secondary);
+	background: -webkit-linear-gradient(to right, var(--primary), var(--secondary));
+	background: linear-gradient(to right, var(--primary), var(--secondary));
   	color: #fff;
   	padding: 2% 0;
   	border-radius: 20px;
@@ -128,7 +128,7 @@ header a:hover{
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background-color: #ec008c;
+  background-color: var(--secondary);
   margin: 35px 5px;
 }
 #loader span:nth-child(1){
@@ -161,9 +161,9 @@ header a:hover{
 	top: 0;
 	left: 0;
 	position: absolute;
-	background: #ec008c;
-	background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
-	background: linear-gradient(to right, #fc6767, #ec008c);
+	background: var(--secondary);
+	background: -webkit-linear-gradient(to right, var(--primary), var(--secondary));
+	background: linear-gradient(to right, var(--primary), var(--secondary));
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;

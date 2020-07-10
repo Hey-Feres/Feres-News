@@ -1,5 +1,5 @@
 .darkBody{
-	background-color: #111;
+	background-color: var(--dark-mode-background);
 	color: white;
 }
 .darkBody .categories a, .darkBody .categories-mobile a {

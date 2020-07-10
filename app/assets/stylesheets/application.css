@@ -15,3 +15,9 @@
  *= require_self
  */
 
+:root {
+  	--primary: #fc6767;
+	--secondary: #ec008c;
+	--light-mode-background: #f2f2f2;
+	--dark-mode-background: #111111;
+}
