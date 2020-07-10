@@ -1,6 +1,6 @@
 class Home {
-	constructor() {
-		this.base_url = "http://localhost:3000";
+	constructor(base_url) {
+		this.base_url = base_url;
 	}
 
 	loaded(){
