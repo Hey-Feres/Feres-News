@@ -1,6 +1,6 @@
 class Home {
 	constructor() {
-		
+		this.base_url = "http://localhost:3000";
 	}
 
 	loaded(){
@@ -11,13 +11,13 @@ class Home {
 		$(".categories-mobile").html("")
 		$(".news").html("")
 		$(".news").html('<div class="loader" id="loader"><span></span><span></span><span></span></div>')
-		
 		let today = new Date()
 		today = today.getFullYear() + "-" + ("0" + today.getMonth()).slice(-2) + "-" + ("0" + today.getDate()).slice(-2)		
-		
 		let request = new Request()
-		let url = 'http://newsapi.org/v2/everything?q='+params+'&from='+today+'&sortBy=popularity&language=en&apiKey=dbd8a962d3004ce993c040c8a3f23ff6'
+		let url = this.base_url + "/search"
+		let data = { date: today, search_param: params }
 		let successCallback = data => {
+			console.log(data)
 			$(".news").html("")
 			$(".news").append("<h4 class='ml-3 mr-3 mb-4'>Showing results for "+params+"</h4>" +
 						"<div class='articles'>" +
@@ -52,7 +52,7 @@ class Home {
             $(".news").html("")
             $(".news").html("<p>Erro</p>")
         }
-        let response = request.get(url,successCallback,errorCallback)
+        let response = request.post(data,url,successCallback,errorCallback)
         return response
 	}
 }

@@ -226,3 +226,16 @@ footer p{
 #bruno{
 	border-radius: 10px;
 }
+.magic-navigator{
+  background: rgba(255,255,255, .4);
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  top: 2%;
+  left: 0;
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  -moz-backdrop-filter: blur(13px);
+  -ms-backdrop-filter: blur(13px);
+  -o-backdrop-filter: blur(13px);    
+}

@@ -31,3 +31,6 @@
 .darkBody .login h2, .darkBody .signup h2{
 	color: #111;
 }
+.darkBody .magic-navigator{
+	background: rgba(0,0,0,.7);
+}
