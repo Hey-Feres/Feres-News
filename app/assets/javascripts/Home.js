@@ -5,6 +5,7 @@ class Home {
 
 	loaded(){
 		$(".AboutFeresNews").hide()
+		$("#myFrame").hide()
 	}
 
 	search(params){
@@ -54,6 +55,24 @@ class Home {
         }
         let response = request.post(data,url,successCallback,errorCallback)
         return response
+	}
+	displayNews(newsUrl){
+		$("#newsFrame").attr("src", newsUrl)
+		$("#myFrame").show()
+		$("#myFrame").addClass("animated slideInUp")
+		setTimeout(function(){
+			$("#myFrame").addClass("myFrameBlurredBackground")
+			$("#myFrame").removeClass("animated slideInUp")
+		},750)		
+	}
+	closeNews(){
+		$("#myFrame").removeClass("myFrameBlurredBackground")
+		$("#myFrame").addClass("animated slideOutDown")
+		setTimeout(function(){
+			$("#myFrame").hide()
+			$("#myFrame").removeClass("animated slideOutDown")
+			$("#newsFrame").attr("src", "")
+		},750)
 	}
 }
 

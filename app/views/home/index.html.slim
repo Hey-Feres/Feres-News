@@ -38,18 +38,16 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 		center
 			.row
 				- 8.times do |i|
-					.col-lg-3.col-md-4.col-sm-12.mb-3
-						.article.animated.fadeInUpBig
-							div
-								a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-									img.thumb src="#{@topHeadlines['articles'][i]['urlToImage']}"
-									p.title= @topHeadlines['articles'][i]['title']
-							div
-								a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-									button.read= translate 'home.read'
+					= render "news", news: @topHeadlines['articles'][i]
 
 /= render 'about'
-
+#myFrame
+	.frameHeader
+		p Feres News
+		/ p= Time.now.strftime('%H:%M')
+		p#closeFrame.pointer
+			img src="https://img.icons8.com/ios/25/E74C3C/cancel.png"
+	iframe#newsFrame src=""
 javascript:
 	$(document).ready(function(){
 		const base_url = "#{Rails.env}" == "development" ? "http://localhost:3000" : "http://feres-news.com"
@@ -74,6 +72,13 @@ javascript:
 				$(".AboutFeresNews").hide()
 				$(".AboutFeresNews").removeClass("animated fadeOutRightBig")
 			}, 800);
+		})
+		$(".read").click(function(){
+			let newsUrl = $(this).attr("id")
+			home.displayNews(newsUrl)
+		})
+		$("#closeFrame").click(function() {
+			home.closeNews()
 		})
 	})
 
