@@ -15,17 +15,23 @@ header.d-flex.justify-content-between.animated.slideInDown
 	input.search.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
 input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
 .categories-mobile
-	center
-		.row
-			- @categories.each do |category|
-				.col-6.mb-4
-					= link_to category[:path] do 
-						.category.mr-4.ml-4.animated.zoomIn
-							center
-								img src="#{category[:iconSrc]}"
+	.row
+		- @categories.each do |category|
+			.col-6.mb-4
+				= link_to category[:path] do 
+					.category.animated.zoomIn
+						center
+							img src="#{category[:iconSrc]}"
+							p= category[:name]
 
 .categories
-	- @categories.each do |category|
+	.row
+		- @categories.each do |category|
+			.col-lg-2.col-md-2.col-sm-6.mb-2
+				= link_to category[:path] do 
+					.category.animated.zoomIn
+						h4= category[:name]
+	/- @categories.each do |category|
 		= link_to category[:path] do 
 			.category.mr-4.ml-4.animated.zoomIn
 				center
@@ -38,17 +44,7 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 		center
 			.row
 				- 8.times do |i|
-					.col-lg-3.col-md-4.col-sm-12.mb-3
-						.article.animated.fadeInUpBig
-							div
-								a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-									img.thumb src="#{@topHeadlines['articles'][i]['urlToImage']}"
-									p.title= @topHeadlines['articles'][i]['title']
-							div
-								a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-									button.read= translate 'home.read'
-
-/= render 'about'
+					= render 'news', news: @topHeadlines['articles'][i]
 
 javascript:
 	$(document).ready(function(){

@@ -28,6 +28,10 @@
 	.categories-mobile{
 		display: block;
 	}
+	.categories-mobile .category p{
+		color: white;
+		text-decoration: none;
+	}
 	.search-mobile{
 		display: block;
 		width: 95%;

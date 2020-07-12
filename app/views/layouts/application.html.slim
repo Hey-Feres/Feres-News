@@ -35,4 +35,8 @@ javascript:
         app.switchToLightMode()
       }
     });
+    $('body').dblclick(function(e){
+      $(location).attr('href',"#{root_path}");
+      e.preventDefault()
+    })
   })

@@ -33,7 +33,7 @@ class HomeController < ApplicationController
 				{name: "#{translate 'home.sports'}", path: "/category/sports", iconSrc: "https://img.icons8.com/ios/60/FFFFFF/volleyball-2.png"},
 				{name: "#{translate 'home.business'}", path: "/category/business", iconSrc: "https://img.icons8.com/ios/60/FFFFFF/business.png"},
 				{name: "#{translate 'home.health'}", path: "/category/health", iconSrc: "https://img.icons8.com/ios/60/FFFFFF/like.png"},
-				{name: "#{translate 'home.entertainment'}", path: "/category/entertainment", iconSrc: "https://img.icons8.com/ios/60/FFFFFF/clapperboard.png"},
+				{name: "#{translate 'home.fun'}", path: "/category/entertainment", iconSrc: "https://img.icons8.com/ios/60/FFFFFF/clapperboard.png"},
 				{name: "#{translate 'home.science'}", path: "/category/science", iconSrc: "https://img.icons8.com/ios/60/FFFFFF/physics.png"},
 				{name: "#{translate 'home.technology'}", path: "/category/technology", iconSrc: "https://img.icons8.com/ios/60/FFFFFF/mouse.png"}
 			]
