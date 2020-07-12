@@ -3,10 +3,11 @@
 		p.text-center= link_to "#{translate 'auth.signOut'}", destroy_user_session_path, method: :delete
 	- else
 		p.text-center= link_to "#{translate 'auth.signIn'}", new_user_session_path
-
+/ Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .horizontal-bar
 	h2.text-black.animated.fadeInLeftBig= @saudation
 	/input.search.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
+/ Categories   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
 .categories-mobile
 	.row
@@ -24,7 +25,7 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 				= link_to category[:path] do 
 					.category.animated.zoomIn
 						h4= category[:name]
-
+/ News .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .news.mt-5.mb-5
 	.horizontal-bar
 		h3.text-black.thin.mb-2.animated.fadeInLeftBig= translate 'home.title'
