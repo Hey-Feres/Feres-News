@@ -34,3 +34,9 @@
 .darkBody .magic-navigator{
 	background: rgba(0,0,0,.7);
 }
+.darkBody .Auth{
+	background: #111;
+}
+.darkBody .Auth .box{
+	box-shadow: 0 0 10px 5px transparent;
+}
