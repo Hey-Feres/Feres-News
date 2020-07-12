@@ -2,7 +2,7 @@
 body{
 	background-color: var(--light-mode-background);
 	font-family: sans-serif;
-	padding-top: 5%;
+	padding-top: 2%;
 }
 .thin{ font-weight: 200 }
 /* Categories Styles .  .  .  .  .  .  .  .  .  .  .  . */
@@ -33,37 +33,24 @@ body{
 	font-weight: 200;
 }
 /* Header Styles .  .  .  .  .  .  .  .  .  .  .  */
-header{
-	width: 100%;
-	backdrop-filter: blur(5px);
-  	-webkit-backdrop-filter: blur(10px);
-  	-moz-backdrop-filter: blur(10px);
-  	-ms-backdrop-filter: blur(10px);
-  	-o-backdrop-filter: blur(10px);
-	background: rgba(255,255,255,.1);
-	position: absolute;
+.Sign{
+	position: fixed;
 	top: 0;
-	left: 0;
-	height: 50px;
-	padding: 0 4%;
+	right: 5%;
+	height: 40px;
+	width: 90px;
 	z-index: 999;
+	padding: 10px 0;
+	background: var(--secondary);
+	background: -webkit-linear-gradient(to right, var(--primary), var(--secondary));
+	background: linear-gradient(to right, var(--primary), var(--secondary));
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 1px 2px 15px 3px var(--primary)
 }
-header p {
- 	font-size: 1em;
- 	line-height: 50px;
- 	font-family: sans-serif;
- 	color: var(--secondary);
-}
-header a {
+.Sign a{
+	color: white !important;
 	text-decoration: none;
- 	font-size: 0.8em;
- 	line-height: 40px;
- 	font-family: sans-serif;
- 	color: var(--secondary);
-}
-header a:hover{
-	text-decoration: none;
- 	color: var(--secondary);
 }
 /* Articles Styles .  .  .  .  .  .  .  .  .  .  .*/
 .articles{
@@ -116,7 +103,7 @@ header a:hover{
 	box-shadow: 1px 5px 15px 1px var(--primary)	
 }
 /* Home Styles .  .  .  .  .  .  .  .  .  .  .  . */
-.topBar{
+.horizontal-bar{
 	display: flex;
 	justify-content: space-between;
 	padding: 0 3% 2% 3%;
@@ -186,68 +173,6 @@ header a:hover{
 	display: flex;
 	justify-content: flex-start;
 }
-footer{
-	width: 100%;
-	backdrop-filter: blur(5px);
-  	-webkit-backdrop-filter: blur(10px);
-  	-moz-backdrop-filter: blur(10px);
-  	-ms-backdrop-filter: blur(10px);
-  	-o-backdrop-filter: blur(10px);
-	background: rgba(255,255,255,0.7);
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	height: 30px;
-	padding: 0 4%;
-	z-index: 999;
-}
-footer p{
-	text-align: center;
-	line-height: 30px;
-	color: #333
-}
-.AboutFeresNews{
-	position: fixed;
-	z-index: 9999999;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	backdrop-filter: blur(13px);
-  	-webkit-backdrop-filter: blur(13px);
-  	-moz-backdrop-filter: blur(13px);
-  	-ms-backdrop-filter: blur(13px);
-  	-o-backdrop-filter: blur(13px);
-	background: rgba(255,255,255,0.6);
-}
-.AboutFeresNews .header{
-	width: 100%;
-	padding: 3%;
-}
-.AboutFeresNews .row{
-	width: 100%;
-	margin: 0 3%;
-}
-.AboutFeresNews .about-box{
-	background-color: rgba(255,255,255,0.99);
-	height: 650px;
-	width: 80%;
-	border-radius: 10px;
-	box-shadow: 1px 2px 10px 5px rgba(0,0,0,0.1)
-}
-#bruno{
-	border-radius: 10px;
-}
-.magic-navigator{
-  background: rgba(255,255,255, .4);
-  position: fixed;
-  width: 20%;
-  height: 100%;
-  top: 2%;
-  left: 0;
-  backdrop-filter: blur(13px);
-  -webkit-backdrop-filter: blur(13px);
-  -moz-backdrop-filter: blur(13px);
-  -ms-backdrop-filter: blur(13px);
-  -o-backdrop-filter: blur(13px);    
+.text-black{
+	color: #555 !important;
 }

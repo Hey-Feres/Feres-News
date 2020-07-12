@@ -1,18 +1,12 @@
-header.d-flex.justify-content-between.animated.slideInDown
-	p Feres News
-	.d-flex.justify-content-end
-		/a href="#{@locale[:path]}"
-			p.mr-5
-				img src="https://img.icons8.com/color/25/000000/#{@locale[:flag]}.png"
-		- if current_user
-			p#signOut= link_to "#{translate 'auth.signOut'}", destroy_user_session_path, method: :delete
-		- else
-			p#signOut= link_to "#{translate 'auth.signIn'}", new_user_session_path
-		/p.ml-5#about style="cursor: pointer"
-			img src="https://img.icons8.com/ios/25/EC008C/info.png"
-.topBar
-	h3.thin.animated.fadeInLeftBig= @saudation
-	input.search.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
+.Sign.animated.slideInDown
+	- if current_user
+		p.text-center= link_to "#{translate 'auth.signOut'}", destroy_user_session_path, method: :delete
+	- else
+		p.text-center= link_to "#{translate 'auth.signIn'}", new_user_session_path
+
+.horizontal-bar
+	h2.text-black.animated.fadeInLeftBig= @saudation
+	/input.search.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
 input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
 .categories-mobile
 	.row
@@ -23,7 +17,6 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 						center
 							img src="#{category[:iconSrc]}"
 							p= category[:name]
-
 .categories
 	.row
 		- @categories.each do |category|
@@ -31,19 +24,15 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 				= link_to category[:path] do 
 					.category.animated.zoomIn
 						h4= category[:name]
-	/- @categories.each do |category|
-		= link_to category[:path] do 
-			.category.mr-4.ml-4.animated.zoomIn
-				center
-					img src="#{category[:iconSrc]}"
-			p.text-center= category[:name]
 
 .news.mt-5.mb-5
-	h4.thin.ml-3.mr-3.mb-4.animated.fadeInLeftBig= translate 'home.title'
+	.horizontal-bar
+		h3.text-black.thin.mb-2.animated.fadeInLeftBig= translate 'home.title'
+		p.text-primary.thin.mb-2.animated.fadeInRightBig Ver Todas
 	.articles
 		center
 			.row
-				- 8.times do |i|
+				- 4.times do |i|
 					= render 'news', news: @topHeadlines['articles'][i]
 
 javascript:
