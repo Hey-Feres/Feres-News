@@ -1,4 +1,8 @@
 class NewsController < ApplicationController
+	def index
+		@news = indexNews
+	end
+
 	def category
 		requestNews params[:category]
 		@categoryName = "#{translate "home.#{params[:category]}"}"
@@ -16,5 +20,9 @@ class NewsController < ApplicationController
 
 		def searchNews date, searchParam
 			return HTTParty.get("http://newsapi.org/v2/everything?q=#{searchParam}&from=#{date}&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
+		end
+
+		def indexNews
+			return HTTParty.get("https://newsapi.org/v2/top-headlines?country=#{@country}&apiKey=#{Rails.application.credentials.news_api_key}")["articles"]
 		end
 end

@@ -1,21 +1,21 @@
-.cover
+.cover.animated.fadeInDownBig
 	.cover-title
-		h1 Technology
+		h1 Hoje
 .news
-	.articles
+	.articles.animated.fadeInUpBig
 		center
 			.row
 				- @news.each do |news|
 					.col-lg-3.col-md-4.col-sm-12.mb-3
-						.article
+						.article.animated.fadeInUpBig
 							div
 								a href="#{news['url']}" target="blank"
 									img.thumb src="#{news['urlToImage']}"
 									p.title= news['title']
 							div
 								a href="#{news['url']}" target="blank"
-									button.read Read
+									button.read= translate 'home.read'
 css:
 	.news{
-		margin-top: 170px !important;
+		margin-top: 200px !important;
 	}
