@@ -2,14 +2,23 @@
 	background-color: var(--dark-mode-background);
 	color: white;
 }
+.darkBody h1,h2,h3,h4,h5,h6,p{
+	color:white !important;
+}
+.darkBody .Sign{
+	box-shadow: 1px 5px 15px 1px var(--primary)
+}
 .darkBody .categories a, .darkBody .categories-mobile a {
 	color: white !important;
 }
-.darkBody #signOut{
-	color: #ec008c !important;
+.darkBody .category{
+	box-shadow: 1px 5px 15px 1px var(--primary)
 }
-.darkBody header{
-	background-color: rgba(0,0,0,0.7);
+.darkBody .category:hover{
+	box-shadow: 1px 5px 20px 1px var(--primary)
+}
+.darkBody .article .read{
+	box-shadow: 0px 1px 10px 1px transparent
 }
 .darkBody .article{
 	background: #000;
@@ -22,21 +31,12 @@
 	background-color: #000;
 	color: white;
 }
-.darkBody footer{
-	background-color: rgba(0,0,0,0.7) !important;
-}
-.darkBody footer p {
-	color: white !important;	
-}
-.darkBody .login h2, .darkBody .signup h2{
-	color: #111;
-}
-.darkBody .magic-navigator{
-	background: rgba(0,0,0,.7);
-}
 .darkBody .Auth{
 	background: #111;
 }
 .darkBody .Auth .box{
 	box-shadow: 0 0 10px 5px transparent;
+}
+.darkBody .cover{
+	box-shadow: 1px 5px 15px 1px var(--primary)
 }

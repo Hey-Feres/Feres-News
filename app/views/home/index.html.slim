@@ -5,7 +5,7 @@
 		p.text-center= link_to "#{translate 'auth.signIn'}", new_user_session_path
 / Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .horizontal-bar
-	h2.text-black.animated.fadeInLeftBig= @saudation
+	h2.animated.fadeInLeftBig= @saudation
 	/input.search.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
 / Categories   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
@@ -28,7 +28,7 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 / News .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .news.mt-5.mb-5
 	.horizontal-bar
-		h3.text-black.thin.mb-2.animated.fadeInLeftBig= translate 'home.title'
+		h3.thin.mb-2.animated.fadeInLeftBig= translate 'home.title'
 		p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path
 	.articles
 		center
