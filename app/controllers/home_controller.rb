@@ -16,6 +16,9 @@ class HomeController < ApplicationController
 
 		def getNews
 			@topHeadlines = HTTParty.get("https://newsapi.org/v2/top-headlines?country=#{@country}&apiKey=#{Rails.application.credentials.news_api_key}")
+			@economyNews = HTTParty.get("https://newsapi.org/v2/everything?q=economy&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
+			@coronaNews = HTTParty.get("https://newsapi.org/v2/everything?q=covid&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
+			@politicaNews = HTTParty.get("https://newsapi.org/v2/everything?q=politica&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
 		end
 
 		def homeScreenSaudation

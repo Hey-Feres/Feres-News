@@ -25,7 +25,7 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 				= link_to category[:path] do 
 					.category.animated.zoomIn
 						h4= category[:name]
-/ News .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+/ Headlines .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .news.mt-5.mb-2
 	.horizontal-bar
 		h3.thin.mb-2.animated.fadeInLeftBig= translate 'home.title'
@@ -52,7 +52,81 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 				div
 					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
 						button.read= translate 'home.read'
-
+/ Economy .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.news.mt-5.mb-2
+	.horizontal-bar
+		h3.thin.mb-2.animated.fadeInLeftBig Economia
+		/p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path
+	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{@economyNews['articles'][i]['url']}" target="blank"
+						img.thumb src="#{@economyNews['articles'][i]['urlToImage']}"
+						p.title= @economyNews['articles'][i]['title']
+				div
+					a href="#{@economyNews['articles'][i]['url']}" target="blank"
+						button.read= translate 'home.read'
+	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{@economyNews['articles'][i]['url']}" target="blank"
+						img.thumb src="#{@economyNews['articles'][i]['urlToImage']}"
+						p.title= @economyNews['articles'][i]['title']
+				div
+					a href="#{@economyNews['articles'][i]['url']}" target="blank"
+						button.read= translate 'home.read'
+/ Corona .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.news.mt-5.mb-2
+	.horizontal-bar
+		h3.thin.mb-2.animated.fadeInLeftBig Corona Vírus
+		/p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path
+	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
+						img.thumb src="#{@coronaNews['articles'][i]['urlToImage']}"
+						p.title= @coronaNews['articles'][i]['title']
+				div
+					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
+						button.read= translate 'home.read'
+	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
+						img.thumb src="#{@coronaNews['articles'][i]['urlToImage']}"
+						p.title= @coronaNews['articles'][i]['title']
+				div
+					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
+						button.read= translate 'home.read'
+/ Politica .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.news.mt-5.mb-2
+	.horizontal-bar
+		h3.thin.mb-2.animated.fadeInLeftBig Política
+		/p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path
+	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
+						img.thumb src="#{@politicaNews['articles'][i]['urlToImage']}"
+						p.title= @politicaNews['articles'][i]['title']
+				div
+					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
+						button.read= translate 'home.read'
+	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
+						img.thumb src="#{@politicaNews['articles'][i]['urlToImage']}"
+						p.title= @politicaNews['articles'][i]['title']
+				div
+					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
+						button.read= translate 'home.read'
 javascript:
 	$(document).ready(function(){
 		const base_url = "#{Rails.env}" == "development" ? "http://localhost:3000" : "http://feres-news.com"
