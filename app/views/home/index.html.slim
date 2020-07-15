@@ -26,15 +26,32 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 					.category.animated.zoomIn
 						h4= category[:name]
 / News .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.news.mt-5.mb-5
+.news.mt-5.mb-2
 	.horizontal-bar
 		h3.thin.mb-2.animated.fadeInLeftBig= translate 'home.title'
 		p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path
-	.articles
-		center
-			.row
-				- 4.times do |i|
-					= render 'news', news: @topHeadlines['articles'][i]
+
+	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
+						img.thumb src="#{@topHeadlines['articles'][i]['urlToImage']}"
+						p.title= @topHeadlines['articles'][i]['title']
+				div
+					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
+						button.read= translate 'home.read'
+
+	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
+						img.thumb src="#{@topHeadlines['articles'][i]['urlToImage']}"
+						p.title= @topHeadlines['articles'][i]['title']
+				div
+					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
+						button.read= translate 'home.read'
 
 javascript:
 	$(document).ready(function(){
@@ -64,3 +81,26 @@ javascript:
 	})
 
 
+css:
+	* {
+	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+	}
+
+	body { font-family: sans-serif; }
+
+	.gallery {
+	  background: transparent;
+	}
+
+	.mobile-gallery .gallery-cell {
+	  width: 77%;
+	  margin: 0 5%;
+	  counter-increment: gallery-cell;
+	}
+
+	.web-gallery .gallery-cell {
+	  width: 20%;
+	  margin: 0 2%;
+	  counter-increment: gallery-cell;
+	}	

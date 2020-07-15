@@ -11,6 +11,9 @@
 	border-radius: 10px;	
 	display: none;
 }
+.news .mobile-gallery{
+	display: none;
+}
 /* Mobile Adapted Styles .  .  .  .  .  .  .  .  .  .*/
 @media only screen and (max-width: 600px) {
 	body {
@@ -37,5 +40,11 @@
 		width: 95%;
 		margin: 0 2.5% 4% 2.5%;
 		padding: 2%
+	}
+	.news .mobile-gallery{
+		display: block !important;
+	}
+	.web-gallery .article{
+		display: none;
 	}
 }

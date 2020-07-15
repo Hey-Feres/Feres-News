@@ -21,3 +21,6 @@
 	--light-mode-background: #f2f2f2;
 	--dark-mode-background: #111111;
 }
+body{
+	padding-bottom: 10%;
+}

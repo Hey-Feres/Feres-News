@@ -68,11 +68,15 @@ h1,h2,h3,h4,h5,h6,p{
 	overflow: hidden;
 	background: white;
 	border-radius: 8px;
-	box-shadow: 0 0 40px 3px rgba(0,0,0,0.2);
+	/*box-shadow: 0 0 40px 3px rgba(0,0,0,0.2);*/
 	padding: 2% 2% 7% 2%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+.web-gallery .article{
+	width: 20%;
+	padding: .5% .5% 3% .5%;
 }
 .article .thumb{
 	width: 100%;
