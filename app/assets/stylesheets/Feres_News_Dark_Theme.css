@@ -2,8 +2,8 @@
 	background-color: var(--dark-mode-background);
 	color: white;
 }
-.darkBody h1,h2,h3,h4,h5,h6,p{
-	color:white !important;
+.darkBody h1, .darkBody h2, .darkBody h3, .darkBody h4, .darkBody h5, .darkBody h6, .darkBody p{
+	color: white;
 }
 .darkBody .Sign{
 	box-shadow: 1px 5px 15px 1px var(--primary)
