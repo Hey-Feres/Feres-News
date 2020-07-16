@@ -27,7 +27,7 @@
 						p.title= @topHeadlines['articles'][i]['title']
 				div
 					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-						button.read= translate 'home.read'
+						button.button= translate 'home.read'
 
 	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
 		- 10.times do |i|
@@ -38,7 +38,7 @@
 						p.title= @topHeadlines['articles'][i]['title']
 				div
 					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-						button.read= translate 'home.read'
+						button.button= translate 'home.read'
 / Economy .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .news.mt-5.mb-2
 	.horizontal-bar
@@ -53,7 +53,7 @@
 						p.title= @economyNews['articles'][i]['title']
 				div
 					a href="#{@economyNews['articles'][i]['url']}" target="blank"
-						button.read= translate 'home.read'
+						button.button= translate 'home.read'
 	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
 		- 10.times do |i|
 			.gallery-cell.article
@@ -63,7 +63,7 @@
 						p.title= @economyNews['articles'][i]['title']
 				div
 					a href="#{@economyNews['articles'][i]['url']}" target="blank"
-						button.read= translate 'home.read'
+						button.button= translate 'home.read'
 / Corona .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .news.mt-5.mb-2
 	.horizontal-bar
@@ -78,7 +78,7 @@
 						p.title= @coronaNews['articles'][i]['title']
 				div
 					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
-						button.read= translate 'home.read'
+						button.button= translate 'home.read'
 	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
 		- 10.times do |i|
 			.gallery-cell.article
@@ -88,7 +88,7 @@
 						p.title= @coronaNews['articles'][i]['title']
 				div
 					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
-						button.read= translate 'home.read'
+						button.button= translate 'home.read'
 / Politica .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .news.mt-5.mb-5
 	.horizontal-bar
@@ -103,7 +103,7 @@
 						p.title= @politicaNews['articles'][i]['title']
 				div
 					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
-						button.read= translate 'home.read'
+						button.button= translate 'home.read'
 	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
 		- 10.times do |i|
 			.gallery-cell.article
@@ -113,7 +113,7 @@
 						p.title= @politicaNews['articles'][i]['title']
 				div
 					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
-						button.read= translate 'home.read'
+						button.button= translate 'home.read'
 javascript:
 	$(document).ready(function(){
 		const base_url = "#{Rails.env}" == "development" ? "http://localhost:3000" : "http://feres-news.com"

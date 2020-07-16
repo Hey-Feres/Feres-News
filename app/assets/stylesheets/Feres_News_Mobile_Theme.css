@@ -68,4 +68,15 @@
 	    display: flex;
 	    justify-content: space-between;		
 	}
+	.todayNews{
+		background: #fff;
+		margin: 1%;
+		height: 100px;
+		overflow: hidden;
+		border-radius: 10px;
+		box-shadow: 1px 1px 10px 3px #ccc;
+	}
+	.todayNews img{
+		border-radius: 10px;
+	}
 }

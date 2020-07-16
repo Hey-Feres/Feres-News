@@ -16,8 +16,9 @@
  */
 
 :root {
-  	--primary: #fc6767;
-	--secondary: #ec008c;
+  	--primary: #111;
+	--secondary: #fff;
+	--shadow: #999;
 	--light-mode-background: #f2f2f2;
 	--dark-mode-background: #111111;
 }
