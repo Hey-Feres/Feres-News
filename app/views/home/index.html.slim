@@ -1,23 +1,10 @@
-.Sign.animated.slideInDown
-	- if current_user
-		p.text-center= link_to "#{translate 'auth.signOut'}", destroy_user_session_path, method: :delete
-	- else
-		p.text-center= link_to "#{translate 'auth.signIn'}", new_user_session_path
 / Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.horizontal-bar
-	h2.animated.fadeInLeftBig= @saudation
+.horizontal-bar.animated.fadeInLeftBig
+	div
+		h5= homeDate
+		h2= @saudation
 	/input.search.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
 / Categories   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
-.categories-mobile
-	.row
-		- @categories.each do |category|
-			.col-6.mb-4
-				= link_to category[:path] do 
-					.category.animated.zoomIn
-						center
-							img src="#{category[:iconSrc]}"
-							p= category[:name]
 .categories
 	.row
 		- @categories.each do |category|
@@ -26,10 +13,10 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 					.category.animated.zoomIn
 						h4= category[:name]
 / Headlines .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.news.mt-5.mb-2
+.news.mt-2.mb-2
 	.horizontal-bar
 		h3.thin.mb-2.animated.fadeInLeftBig= translate 'home.title'
-		p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path
+		p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", today_news_path
 
 	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
 		- 10.times do |i|
@@ -103,7 +90,7 @@ input.search-mobile.animated.fadeInRightBig type="text" placeholder="#{translate
 					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
 						button.read= translate 'home.read'
 / Politica .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.news.mt-5.mb-2
+.news.mt-5.mb-5
 	.horizontal-bar
 		h3.thin.mb-2.animated.fadeInLeftBig Política
 		/p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path

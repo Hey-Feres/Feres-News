@@ -6,6 +6,11 @@ class HomeController < ApplicationController
 		locale
 	end
 
+	def today_news
+		homeScreenSaudation
+		getNews
+	end
+
 	private
 		def locale
 			@locale = {

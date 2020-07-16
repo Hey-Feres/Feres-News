@@ -14,6 +14,8 @@ html
     - if alert
       p.alert= alert
     = yield
+    = render 'mobile/bottom-nav'
+
 css:
   .alert, .notice {
     color: white;

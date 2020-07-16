@@ -14,10 +14,13 @@
 .news .mobile-gallery{
 	display: none;
 }
+.bottom-nav{
+	display: none;
+}
 /* Mobile Adapted Styles .  .  .  .  .  .  .  .  .  .*/
 @media only screen and (max-width: 600px) {
 	body {
-		margin-top: 10%;
+		margin-top: 2%;
 	}
 	.topBar h3{
 		font-size: 1.5em;
@@ -46,5 +49,23 @@
 	}
 	.web-gallery .article{
 		display: none;
+	}
+	.bottom-nav {
+		display: block;
+	    width: 100%;
+	    background: rgba(255,255,255,0.7);
+	    height: 60px;
+	    position: fixed;
+	    bottom: 0;
+	    left: 0;
+	    z-index: 9999;
+	    padding: 2% 4% 3% 4%;
+	    backdrop-filter: blur(10px);
+	    -webkit-backdrop-filter: blur(10px);
+	    -moz-backdrop-filter: blur(10px);
+	    -ms-backdrop-filter: blur(10px);
+	    -o-backdrop-filter: blur(10px);
+	    display: flex;
+	    justify-content: space-between;		
 	}
 }
