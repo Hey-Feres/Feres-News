@@ -4,4 +4,6 @@ class User < ApplicationRecord
 	validates_presence_of :name
 
 	has_one_attached :photo
+
+	has_many :following, dependent: :destroy
 end

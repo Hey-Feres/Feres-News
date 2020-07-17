@@ -5,9 +5,11 @@ Rails.application.routes.draw do
 	get "/category/:category", to: "news#category"
 	get "/today", to: "news#today"
 	get "/categories", to: "news#categories"
-	
+	get "/remove_following/:following_id", to: "user#remove_following"
+	get "/add_following/:category", to: "user#new_following"
+
 	post "/search", to: "news#search"
 	post "/upload_photo", to: "user#upload_photo"
-	
+
 	root "home#index"
 end
