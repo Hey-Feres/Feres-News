@@ -1,0 +1,23 @@
+.d-flex.justify-content-end.pl-3.pr-3
+	p.text-primary Sair
+.d-flex.justify-content-center
+	div
+		= form_with(url: "/upload_photo") do |f|
+			p
+				- if @user.photo
+					label for="upload-photo"
+						= image_tag(@user.photo, width: 200, height: 200, style: "border-radius: 50%")
+					= f.file_field :photo, id: "upload-photo", onchange: "this.form.submit()"
+				- else
+					label for="upload-photo"
+						img src="https://img.icons8.com/ios-filled/200/111111/user-male-circle.png"
+					= f.file_field :photo, id: "upload-photo", onchange: "this.form.submit()"
+		h3.text-center= @user.name
+
+css:
+	label {cursor: pointer}
+	#upload-photo {
+	   opacity: 0;
+	   position: absolute;
+	   z-index: -1;
+	}
