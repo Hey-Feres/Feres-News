@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   	
 	get "/category/:category", to: "news#category"
 	get "/today", to: "news#today"
+	get "/categories", to: "news#categories"
 	post "/search", to: "news#search"
 	root "home#index"
 end

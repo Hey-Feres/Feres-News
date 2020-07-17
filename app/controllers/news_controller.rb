@@ -9,6 +9,10 @@ class NewsController < ApplicationController
 		@categoryName = "#{translate "home.#{params[:category]}"}"
 	end
 	
+	def categories
+		
+	end
+
 	def search
 		@news = searchNews(params[:date], params[:search_param])
 		render json: @news
