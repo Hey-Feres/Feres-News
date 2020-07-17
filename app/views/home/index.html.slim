@@ -1,7 +1,7 @@
 / Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .horizontal-bar.animated.fadeInLeftBig
 	div
-		h5= homeDate
+		h5.home-date= homeDate
 		h2= @saudation
 	/input.search.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
 / Categories   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
@@ -165,3 +165,6 @@ css:
 	  margin: 0 2%;
 	  counter-increment: gallery-cell;
 	}	
+	.home-date{
+		color: rgba(0,0,0,0.3)
+	}

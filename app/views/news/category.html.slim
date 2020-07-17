@@ -22,14 +22,13 @@
 								a href="#{news['url']}" target="blank"
 									button.button= translate 'home.read'
 
-
 javascript:
 	$(document).ready(function(){
-		if ("#{@following.nil?}") {
+		let f = "#{@following.nil?}"
+		if (f == "true") {
 			$(".remove-following").hide()
-		}else{
+		}else {
 			$(".add-following").hide()
-			$(".remove-following").attr("id", "#{@following.id}")
 		}
 	})
 	$(".add-following").click(function(){
