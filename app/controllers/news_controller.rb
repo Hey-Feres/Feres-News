@@ -6,7 +6,7 @@ class NewsController < ApplicationController
 
 	def category
 		requestNews params[:category]
-		@categoryName = "#{translate "home.#{params[:category]}"}"
+		@categoryName = params[:category].capitalize!
 	end
 	
 	def categories

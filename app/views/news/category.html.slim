@@ -1,6 +1,5 @@
-.cover.animated.fadeInDownBig
-	.cover-title
-		h1= @categoryName
+.p-3
+	h1.thin.mb-3.animated.fadeInLeftBig= @categoryName
 .news
 	.articles.animated.fadeInUpBig
 		center
@@ -14,8 +13,4 @@
 									p.title= news['title']
 							div
 								a href="#{news['url']}" target="blank"
-									button.read= translate 'home.read'
-css:
-	.news{
-		margin-top: 200px !important;
-	}
+									button.button= translate 'home.read'
