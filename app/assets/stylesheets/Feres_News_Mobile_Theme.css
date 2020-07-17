@@ -1,26 +1,23 @@
-/* Categories Styles .  .  .  .  .  .  .  .  .  .  . */
-.categories-mobile{
-	display: flex;
-	justify-content: flex-start;
-	padding: 0 4%;
-	display: none;
-}
-/* Search Input Styles .  .  .  .  .  .  .  .  .  .  */
-.search-mobile{
-	border: none;
-	border-radius: 10px;	
-	display: none;
-}
 .news .mobile-gallery{
 	display: none;
 }
 .bottom-nav{
 	display: none;
 }
+.home-mobile{
+	display: none;	
+}
 /* Mobile Adapted Styles .  .  .  .  .  .  .  .  .  .*/
 @media only screen and (max-width: 600px) {
 	body {
 		margin-top: 2%;
+	}
+	/* Home Styles */
+	.home-mobile{
+		display: block;
+	}
+	.home-desktop{
+		display: none;
 	}
 	.topBar h3{
 		font-size: 1.5em;
@@ -79,4 +76,7 @@
 	.todayNews img{
 		border-radius: 10px;
 	}
+	.horizontal-bar{
+		padding: 0 2% 2% 2% !important;
+	}	
 }

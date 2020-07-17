@@ -1,0 +1,16 @@
+.home-desktop
+  .sidebar
+    .horizontal-bar
+      div
+        h5.thin.home-date= homeDate
+        h2.thin= @saudation
+    .d-flex.justify-content-start.pl-2.pr-2
+      p= link_to root_path, style: "color: #777777; text-decoration: none"
+        p.mr-1
+          img src="https://img.icons8.com/ios-glyphs/30/777777/today-apps.png"
+        p.ml-1 style="line-height: 30px;" Home
+    .d-flex.justify-content-start.pl-2.pr-2
+      p= link_to categories_path, style: "color: #777777; text-decoration: none"
+        p.mr-1
+          img src="https://img.icons8.com/ios-glyphs/30/777777/albums.png"
+        p.ml-1 style="line-height: 30px;" Categorias

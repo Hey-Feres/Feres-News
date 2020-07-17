@@ -1,21 +1,26 @@
-/ Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.horizontal-bar.animated.fadeInLeftBig
-	div
-		h5.home-date= homeDate
-		h2= @saudation
-	/input.search.animated.fadeInRightBig type="text" placeholder="#{translate 'home.search_placeholder'}"
-/ Categories   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.categories
-	.row
-		- @categories.each do |category|
-			.col-lg-2.col-md-2.col-sm-6.mb-2
-				= link_to category[:path] do 
-					.category.animated.zoomIn
-						h4= category[:name]
+.home-desktop
+	.horizontal-bar.mt-1.mb-1
+	  	h2.thin Feres News
+	  	- if current_user
+	  		- if current_user.photo
+	  			p= link_to profile_path
+	  				= image_tag(current_user.photo, width: 50, height: 50, style: "border-radius: 50%")	
+	  		- else
+	  			p= link_to profile_path
+			    	img src="https://img.icons8.com/ios-filled/50/999999/user-male-circle.png"
+	  	- else
+	  		p= link_to new_user_session_path
+			    img src="https://img.icons8.com/ios-filled/50/999999/user-male-circle.png"
+.home-mobile
+	/ Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+	.horizontal-bar.animated.fadeInLeftBig
+		div
+			h5.home-date= homeDate
+			h2= @saudation
 / Headlines .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.news.mt-2.mb-2
+.news.mt-1.mb-1
 	.horizontal-bar
-		h3.thin.mb-2.animated.fadeInLeftBig= translate 'home.title'
+		h3.thin.mb-2.animated.fadeInLeftBig Hoje
 		p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", today_path
 
 	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
@@ -43,7 +48,6 @@
 .news.mt-5.mb-2
 	.horizontal-bar
 		h3.thin.mb-2.animated.fadeInLeftBig Economia
-		/p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path
 	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
 		- 10.times do |i|
 			.gallery-cell.article
@@ -68,7 +72,6 @@
 .news.mt-5.mb-2
 	.horizontal-bar
 		h3.thin.mb-2.animated.fadeInLeftBig Corona Vírus
-		/p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path
 	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
 		- 10.times do |i|
 			.gallery-cell.article
@@ -93,7 +96,6 @@
 .news.mt-5.mb-5
 	.horizontal-bar
 		h3.thin.mb-2.animated.fadeInLeftBig Política
-		/p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", news_path
 	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
 		- 10.times do |i|
 			.gallery-cell.article
@@ -144,27 +146,30 @@ javascript:
 
 css:
 	* {
-	  -webkit-box-sizing: border-box;
-	  box-sizing: border-box;
+	  	-webkit-box-sizing: border-box;
+	  	box-sizing: border-box;
 	}
 
 	body { font-family: sans-serif; }
-
-	.gallery {
-	  background: transparent;
+	#aligner1,#aligner2{
+		background: black !important;	
 	}
-
+	.gallery {
+		background: -webkit-linear-gradient(to bottom, #fff, #f2f2f2);
+		background: linear-gradient(to bottom, #fff, #f2f2f2);	  
+	}
 	.mobile-gallery .gallery-cell {
-	  width: 77%;
-	  margin: 0 5%;
-	  counter-increment: gallery-cell;
+	  	width: 77%;
+	  	margin: 0 5%;
+	  	counter-increment: gallery-cell;
 	}
 
 	.web-gallery .gallery-cell {
-	  width: 20%;
-	  margin: 0 2%;
-	  counter-increment: gallery-cell;
+	  	width: 20%;
+	  	margin: 0 1%;
+	  	counter-increment: gallery-cell;
 	}	
 	.home-date{
 		color: rgba(0,0,0,0.3)
 	}
+
