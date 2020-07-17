@@ -1,6 +1,7 @@
 class UserController < ApplicationController
 	before_action :set_user
 	def index  		
+		@following = @user.following
  	end
 
  	def upload_photo
