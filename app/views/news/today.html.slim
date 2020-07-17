@@ -4,7 +4,7 @@
 		h5= homeDate
 		h2= @saudation
 .row.mb-5
-	- @topHeadlines["articles"].each do |news|
+	- @news.each do |news|
 		.col-sm-12.col-lg-6.animated.fadeInRightBig
 			.d-flex.justify-content-start.todayNews
 				p

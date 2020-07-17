@@ -1,6 +1,7 @@
 class NewsController < ApplicationController
-	def index
+	def today
 		@news = indexNews
+		saudation
 	end
 
 	def category
@@ -24,5 +25,15 @@ class NewsController < ApplicationController
 
 		def indexNews
 			return HTTParty.get("https://newsapi.org/v2/top-headlines?country=#{@country}&apiKey=#{Rails.application.credentials.news_api_key}")["articles"]
+		end
+
+		def saudation
+			isMorning = (0..11).include?(Time.now.hour) ? true : false
+			@saudation = nil
+			if current_user
+				@saudation = isMorning ? "#{translate 'home.morning_saudation'}, #{current_user.name}" : "#{translate 'home.afternoon_saudation'}, #{current_user.name}"
+			else
+				@saudation = isMorning ? "#{translate 'home.morning_saudation'}" : "#{translate 'home.afternoon_saudation'}"
+			end
 		end
 end
