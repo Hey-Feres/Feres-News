@@ -10,7 +10,8 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0"
   body
     = render 'layouts/desktop-sidebar'
-    = yield
+    .main
+        = yield
     = render 'mobile/bottom-nav'
 
 css:

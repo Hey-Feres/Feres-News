@@ -12,6 +12,11 @@
 	body {
 		margin-top: 2%;
 	}
+	.main{
+		left: 0 !important;
+		width: 100% !important;
+		padding-top: 3% !important;
+	}	
 	/* Home Styles */
 	.home-mobile{
 		display: block;

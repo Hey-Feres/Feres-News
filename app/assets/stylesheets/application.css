@@ -19,9 +19,10 @@
   	--primary: #111;
 	--secondary: #fff;
 	--shadow: #999;
-	--light-mode-background: #f2f2f2;
+	--light-mode-background: #fff;
 	--dark-mode-background: #111111;
 }
 body{
 	padding-bottom: 10%;
 }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');

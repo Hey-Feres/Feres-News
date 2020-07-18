@@ -1,0 +1,106 @@
+/ Headlines .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.news.mt-1.mb-1
+	.horizontal-bar
+		h2.thin.animated.fadeInLeftBig Hoje
+		/p.text-primary.thin.animated.fadeInRightBig
+		h2= link_to today_path do
+			img.animated.bounceIn src="https://img.icons8.com/ios-glyphs/35/000000/connection-status-off.png"
+	.mobile-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{headlines[i]['url']}" target="blank"
+						img.thumb src="#{headlines[i]['urlToImage']}"
+						p.title= headlines[i]['title']
+				div
+					a href="#{headlines[i]['url']}" target="blank"
+						button.button= translate 'home.read'
+
+	.web-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{headlines[i]['url']}" target="blank"
+						img.thumb src="#{headlines[i]['urlToImage']}"
+						p.title= headlines[i]['title']
+				div
+					a href="#{headlines[i]['url']}" target="blank"
+						button.button= translate 'home.read'
+/ Economy .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.news.mt-3.mb-1
+	.horizontal-bar
+		h2.thin.mb-2.animated.fadeInLeftBig Economia
+		h2.add-following
+			img.animated.bounceIn src="https://img.icons8.com/ios-glyphs/35/000000/add.png"
+	.mobile-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{economy[i]['url']}" target="blank"
+						img.thumb src="#{economy[i]['urlToImage']}"
+						p.title= economy[i]['title']
+				div
+					a href="#{economy[i]['url']}" target="blank"
+						button.button= translate 'home.read'
+	.web-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{economy[i]['url']}" target="blank"
+						img.thumb src="#{economy[i]['urlToImage']}"
+						p.title= economy[i]['title']
+				div
+					a href="#{economy[i]['url']}" target="blank"
+						button.button= translate 'home.read'
+/ Corona .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.news.mt-3.mb-1
+	.horizontal-bar
+		h2.thin.mb-2.animated.fadeInLeftBig Corona Vírus
+		h2.add-following
+			img.animated.bounceIn src="https://img.icons8.com/ios-glyphs/35/000000/add.png"
+	.mobile-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{corona[i]['url']}" target="blank"
+						img.thumb src="#{corona[i]['urlToImage']}"
+						p.title= corona[i]['title']
+				div
+					a href="#{corona[i]['url']}" target="blank"
+						button.button= translate 'home.read'
+	.web-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{corona[i]['url']}" target="blank"
+						img.thumb src="#{corona[i]['urlToImage']}"
+						p.title= corona[i]['title']
+				div
+					a href="#{corona[i]['url']}" target="blank"
+						button.button= translate 'home.read'
+/ Politica .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.news.mt-3.mb-1
+	.horizontal-bar
+		h2.thin.mb-2.animated.fadeInLeftBig Política
+		h2.add-following
+			img.animated.bounceIn src="https://img.icons8.com/ios-glyphs/35/000000/add.png"
+	.mobile-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{politica[i]['url']}" target="blank"
+						img.thumb src="#{politica[i]['urlToImage']}"
+						p.title= politica[i]['title']
+				div
+					a href="#{politica[i]['url']}" target="blank"
+						button.button= translate 'home.read'
+	.web-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+		- 10.times do |i|
+			.gallery-cell.article
+				div
+					a href="#{politica[i]['url']}" target="blank"
+						img.thumb src="#{politica[i]['urlToImage']}"
+						p.title= politica[i]['title']
+				div
+					a href="#{politica[i]['url']}" target="blank"
+						button.button= translate 'home.read'

@@ -1,6 +1,6 @@
 .home-desktop
-	.horizontal-bar.mt-1.mb-1
-	  	h2.thin Feres News
+	.horizontal-bar.mt-5.mb-1
+	  	h1.ulta-thin Feres News
 	  	- if current_user
 	  		- if current_user.photo
 	  			p= link_to profile_path
@@ -17,105 +17,7 @@
 		div
 			h5.home-date= homeDate
 			h2= @saudation
-/ Headlines .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.news.mt-1.mb-1
-	.horizontal-bar
-		h3.thin.mb-2.animated.fadeInLeftBig Hoje
-		p.text-primary.thin.mb-2.animated.fadeInRightBig= link_to "Ver Todas", today_path
-
-	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
-		- 10.times do |i|
-			.gallery-cell.article
-				div
-					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-						img.thumb src="#{@topHeadlines['articles'][i]['urlToImage']}"
-						p.title= @topHeadlines['articles'][i]['title']
-				div
-					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-						button.button= translate 'home.read'
-
-	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
-		- 10.times do |i|
-			.gallery-cell.article
-				div
-					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-						img.thumb src="#{@topHeadlines['articles'][i]['urlToImage']}"
-						p.title= @topHeadlines['articles'][i]['title']
-				div
-					a href="#{@topHeadlines['articles'][i]['url']}" target="blank"
-						button.button= translate 'home.read'
-/ Economy .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.news.mt-5.mb-2
-	.horizontal-bar
-		h3.thin.mb-2.animated.fadeInLeftBig Economia
-	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
-		- 10.times do |i|
-			.gallery-cell.article
-				div
-					a href="#{@economyNews['articles'][i]['url']}" target="blank"
-						img.thumb src="#{@economyNews['articles'][i]['urlToImage']}"
-						p.title= @economyNews['articles'][i]['title']
-				div
-					a href="#{@economyNews['articles'][i]['url']}" target="blank"
-						button.button= translate 'home.read'
-	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
-		- 10.times do |i|
-			.gallery-cell.article
-				div
-					a href="#{@economyNews['articles'][i]['url']}" target="blank"
-						img.thumb src="#{@economyNews['articles'][i]['urlToImage']}"
-						p.title= @economyNews['articles'][i]['title']
-				div
-					a href="#{@economyNews['articles'][i]['url']}" target="blank"
-						button.button= translate 'home.read'
-/ Corona .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.news.mt-5.mb-2
-	.horizontal-bar
-		h3.thin.mb-2.animated.fadeInLeftBig Corona Vírus
-	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
-		- 10.times do |i|
-			.gallery-cell.article
-				div
-					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
-						img.thumb src="#{@coronaNews['articles'][i]['urlToImage']}"
-						p.title= @coronaNews['articles'][i]['title']
-				div
-					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
-						button.button= translate 'home.read'
-	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
-		- 10.times do |i|
-			.gallery-cell.article
-				div
-					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
-						img.thumb src="#{@coronaNews['articles'][i]['urlToImage']}"
-						p.title= @coronaNews['articles'][i]['title']
-				div
-					a href="#{@coronaNews['articles'][i]['url']}" target="blank"
-						button.button= translate 'home.read'
-/ Politica .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-.news.mt-5.mb-5
-	.horizontal-bar
-		h3.thin.mb-2.animated.fadeInLeftBig Política
-	.mobile-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
-		- 10.times do |i|
-			.gallery-cell.article
-				div
-					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
-						img.thumb src="#{@politicaNews['articles'][i]['urlToImage']}"
-						p.title= @politicaNews['articles'][i]['title']
-				div
-					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
-						button.button= translate 'home.read'
-	.web-gallery.gallery.js-flickity data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
-		- 10.times do |i|
-			.gallery-cell.article
-				div
-					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
-						img.thumb src="#{@politicaNews['articles'][i]['urlToImage']}"
-						p.title= @politicaNews['articles'][i]['title']
-				div
-					a href="#{@politicaNews['articles'][i]['url']}" target="blank"
-						button.button= translate 'home.read'
+= render "./home/news", headlines: @topHeadlines['articles'], economy: @economyNews['articles'], corona: @coronaNews['articles'], politica: @politicaNews['articles']
 javascript:
 	$(document).ready(function(){
 		const base_url = "#{Rails.env}" == "development" ? "http://localhost:3000" : "http://feres-news.com"
