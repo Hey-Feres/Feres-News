@@ -24,8 +24,9 @@ class HomeController < ApplicationController
 		def homeScreenSaudation
 			isMorning = (0..11).include?(Time.now.hour) ? true : false
 			@saudation = nil
+			name = current_user.name.split(" ")[0]
 			if current_user
-				@saudation = isMorning ? "#{translate 'home.morning_saudation'}, #{current_user.name}" : "#{translate 'home.afternoon_saudation'}, #{current_user.name}"
+				@saudation = isMorning ? "#{translate 'home.morning_saudation'}, #{name}" : "#{translate 'home.afternoon_saudation'}, #{name}"
 			else
 				@saudation = isMorning ? "#{translate 'home.morning_saudation'}" : "#{translate 'home.afternoon_saudation'}"
 			end
