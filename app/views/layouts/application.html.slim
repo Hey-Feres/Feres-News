@@ -21,19 +21,19 @@ css:
 
 javascript:
   $(document).ready(function(){
-    app = new App()
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      app.switchToDarkMode()
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-      if(e.matches){        
-        app.switchToDarkMode()
-      }else{
-        app.switchToLightMode()
-      }
-    });
-    $('body').dblclick(function(e){
-      $(location).attr('href',"#{root_path}");
-      e.preventDefault()
-    })
+    // app = new App()
+    // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    //   app.switchToDarkMode()
+    // }
+    // window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+    //   if(e.matches){        
+    //     app.switchToDarkMode()
+    //   }else{
+    //     app.switchToLightMode()
+    //   }
+    // });
+    // $('body').dblclick(function(e){
+    //   $(location).attr('href',"#{root_path}");
+    //   e.preventDefault()
+    // })
   })
