@@ -42,12 +42,17 @@ Here are the technologies used in this project.
 ## Getting started
 
 * To install gems:
->    $ bundle install
+```bash
+$ bundle install
+```
 * To create the bank and do as migrations:
->    $ rails db:create db:migrate
+```bash
+$ rails db:create db:migrate
+```
 * To run the project:
->    $ rails s
-
+```bash
+$ rails s
+```
 ## How to use
 
 Here will be the images and descriptions. Principal content.
