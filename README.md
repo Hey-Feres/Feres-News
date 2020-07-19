@@ -3,7 +3,7 @@
 ## Feres News
 
 The Coolest News Web App!!
--
+
 ⭐ Minimalist and Gorgeous UI.
 
 📱 Full Responsive.
@@ -15,32 +15,34 @@ The Coolest News Web App!!
 ✏️ Customizable.
 
 Developed with ❤️ in Brazil.
--
+
 
 ## Technology 
 
 Here are the technologies used in this project.
 
-* Ruby version  x.x.x
-* Rails version x.x.x
-* ...
-
+* Ruby version  2.6
+* Rails version 5.2.0
 
 ## Services Used
 
 * Github
-* ...
-
+* Digital Ocean VPN (Production)
+* News API
 
 ## Ruby Gems
-...
+* Devise
+* SQLite (Development)
+* MySQL (Production)
+* HTTParty
+* Slim Template
 
 ## Getting started
 
 * To install gems:
 >    $ bundle install
 * To create the bank and do as migrations:
->    $ rake db:create db:migrate db:seed
+>    $ rails db:create db:migrate
 * To run the project:
 >    $ rails s
 
