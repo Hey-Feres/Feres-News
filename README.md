@@ -4,6 +4,13 @@
 
 The Coolest News Web App!!
 
+Minimalist and Gorgeous UI.
+Full Responsive.
+Easy to Use.
+Lightweight App.
+Customizable.
+
+Developed with ❤️ in Brazil. 
 
 ## Technology 
 
