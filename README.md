@@ -54,10 +54,11 @@ $ rails db:create db:migrate
 $ rails s
 ```
 ## Prints
-<img style="border-radius: 5px" align="left" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_1.png">
-<img style="border-radius: 5px" align="right" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_2.png">
-<img style="border-radius: 5px" align="left" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_3.png">
-<img style="border-radius: 5px" align="right" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_4.png">
+<img align="left" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_1.png">
+<img align="right" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_2.png">
+
+<img align="left" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_3.png">
+<img align="right" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_4.png">
 
 
 ## Features
