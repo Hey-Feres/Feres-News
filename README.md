@@ -1,8 +1,9 @@
 <p align="center">
   <img width="100" height="100" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/logo.png">
-  <h2> Feres News </h2>
 </p>
-
+<center>
+  <h2> Feres News </h2>
+</center>
 ## Feres News
 
 The Coolest News Web App!!
