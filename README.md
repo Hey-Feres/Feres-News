@@ -1,6 +1,6 @@
-<p align="center">
-  <img width="100" height="100" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/logo.png">
-</p>
+
+<!--   <img width="100" height="100" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/logo.png"> -->
+<img align="right" width="100" height="100" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/logo.png"> Feres News
 
 ## Feres News
 
