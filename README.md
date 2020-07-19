@@ -1,4 +1,4 @@
-![Logo of the project](https://github.com/Hey-Feres/Feres-News/blob/master/public/logo.png)
+![Logo of the project](https://github.com/Hey-Feres/Feres-News/blob/master/public/Readme-Cover.png)
 
 ## Feres News
 
