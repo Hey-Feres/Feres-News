@@ -57,6 +57,7 @@ $ rails s
 <img align="left" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_1.png">
 <img align="right" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_2.png">
 
+
 <img align="left" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_3.png">
 <img align="right" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/Print_4.png">
 
