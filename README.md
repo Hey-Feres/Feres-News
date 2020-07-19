@@ -3,14 +3,19 @@
 ## Feres News
 
 The Coolest News Web App!!
+-
+⭐ Minimalist and Gorgeous UI.
 
-Minimalist and Gorgeous UI.
-Full Responsive.
-Easy to Use.
-Lightweight App.
-Customizable.
+📱 Full Responsive.
 
-Developed with ❤️ in Brazil. 
+💡 Easy to Use.
+
+🍃 Lightweight App.
+
+✏️ Customizable.
+
+Developed with ❤️ in Brazil.
+-
 
 ## Technology 
 
