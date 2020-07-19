@@ -1,4 +1,4 @@
-![Logo of the project](http://logo_link)
+![Logo of the project](https://github.com/Hey-Feres/Feres-News/blob/master/public/logo.png)
 
 ## Name_of_the_project
 
