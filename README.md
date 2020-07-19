@@ -1,8 +1,8 @@
 ![Logo of the project](https://github.com/Hey-Feres/Feres-News/blob/master/public/logo.png)
 
-## Name_of_the_project
+## Feres News
 
-... Description
+The Coolest News Web App!!
 
 
 ## Technology 
