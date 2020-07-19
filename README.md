@@ -53,7 +53,7 @@ $ rails db:create db:migrate
 ```bash
 $ rails s
 ```
-## How to use
+## Prints
 
 Here will be the images and descriptions. Principal content.
 
