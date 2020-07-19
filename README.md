@@ -1,5 +1,6 @@
 <p align="center">
-  <img width="400" height="400" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/logo.png">
+  <img width="100" height="100" src="https://github.com/Hey-Feres/Feres-News/blob/master/public/logo.png">
+  <h2> Feres News </h2>
 </p>
 
 ## Feres News
