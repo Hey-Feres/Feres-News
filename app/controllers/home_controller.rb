@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
 	def index
 		getNews
-		homeScreenSaudation
 		availableCategories
 		locale
 	end
@@ -19,17 +18,6 @@ class HomeController < ApplicationController
 			@economyNews = HTTParty.get("https://newsapi.org/v2/everything?q=economy&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
 			@coronaNews = HTTParty.get("https://newsapi.org/v2/everything?q=covid&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
 			@politicaNews = HTTParty.get("https://newsapi.org/v2/everything?q=politica&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
-		end
-
-		def homeScreenSaudation
-			isMorning = (0..11).include?(Time.now.hour) ? true : false
-			@saudation = nil			
-			if current_user
-				name = current_user.name.split(" ")[0]
-				@saudation = isMorning ? "#{translate 'home.morning_saudation'}, #{name}" : "#{translate 'home.afternoon_saudation'}, #{name}"
-			else
-				@saudation = isMorning ? "#{translate 'home.morning_saudation'}" : "#{translate 'home.afternoon_saudation'}"
-			end
 		end
 
 		def availableCategories

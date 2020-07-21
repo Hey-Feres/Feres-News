@@ -16,7 +16,7 @@
 	.horizontal-bar.animated.fadeInLeftBig
 		div
 			h5.home-date= homeDate
-			h2= @saudation
+			h2= saudation
 = render "./home/news", headlines: @topHeadlines['articles'], economy: @economyNews['articles'], corona: @coronaNews['articles'], politica: @politicaNews['articles']
 javascript:
 	$(document).ready(function(){
