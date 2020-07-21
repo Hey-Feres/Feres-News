@@ -7,7 +7,9 @@ class NewsController < ApplicationController
 	def category
 		requestNews params[:category]
 		@categoryName = params[:category].capitalize!
-		@following = Following.where('title LIKE ? AND user_id = ?', "#{@categoryName}%", current_user.id).last
+		if current_user
+			@following = Following.where('title LIKE ? AND user_id = ?', "#{@categoryName}%", current_user.id).last
+		end
 	end
 	
 	def categories
