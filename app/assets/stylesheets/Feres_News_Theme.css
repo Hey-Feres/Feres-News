@@ -13,6 +13,9 @@ h1,h2,h3,h4,h5,h6,p{
 	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,.1);
 	box-shadow:         inset 0 0 10px rgba(0,0,0,.1);	
 }
+.pointer{
+	cursor: pointer;
+}
 .thin{ font-weight: 200 }
 .ulta-thin{ font-weight: 50 !important }
 /* Home Styles  .  .  .  .  .  .  .  .  .  .  .  .*/
