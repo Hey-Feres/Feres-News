@@ -4,7 +4,7 @@
 	div
 		= form_with(url: "/upload_photo") do |f|
 			p
-				- if @user.photo
+				- if @user.photo.attached?
 					label for="upload-photo"
 						= image_tag(@user.photo, width: 200, height: 200, style: "border-radius: 50%")
 					= f.file_field :photo, id: "upload-photo", onchange: "this.form.submit()"
