@@ -1,0 +1,12 @@
+/ Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.horizontal-bar.animated.fadeInLeftBig
+	div
+		h5= homeDate
+		h2= @saudation
+.row.mb-5
+	- @news.each do |news|
+		.col-sm-12.col-lg-6.animated.fadeInRightBig
+			.d-flex.justify-content-start.todayNews
+				p
+					img src="#{news['urlToImage']}" style="width: 130px; height: 100px;"
+				p.m-1= news["title"]

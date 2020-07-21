@@ -26,10 +26,8 @@ css:
     left: 0;
   }
   .Auth .box{
-    background: #ec008c;
-    background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
-    background: linear-gradient(to right, #fc6767, #ec008c);
-    box-shadow: 1px 1px 25px 3px var(--primary);
+    background: #fff;
+    box-shadow: 1px 1px 25px 3px rgba(0,0,0,.1);
     width: 25%;
     height: auto;
     padding: 5% 0;    
@@ -40,8 +38,8 @@ css:
     color: white;
   }
   .Auth .box input[type="email"], .Auth .box input[type="password"]{
-    border: none;
-    width: 80%;
+    border: 1px solid #ccc;
+    width: 90%;
     height: 40px;
     margin: 3% 0;
     padding: 2% 4%; 
@@ -49,23 +47,19 @@ css:
   }
   .Auth .box input[type="submit"]{
     border: none;
-    width: 80%;
+    width: 90%;
     height: 40px;
     margin: 3% 0;
     padding: 2% 4%; 
     border-radius: 20px;
-    background: white;
-    color: var(--primary)
+    background: var(--primary);
+    color: var(--secondary)
   }
   .Auth .box a{
-    color: white;
+    color: var(--primary);
   }
   @media only screen and (max-width: 600px) {
     .Auth .box{
-      background: #ec008c;
-      background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
-      background: linear-gradient(to right, #fc6767, #ec008c);
-      box-shadow: 1px 1px 25px 3px var(--primary);
       width: 70%;
       height: auto;
       padding: 15% 0;

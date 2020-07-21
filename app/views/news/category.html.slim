@@ -1,6 +1,11 @@
-.cover.animated.fadeInDownBig
-	.cover-title
-		h1= @categoryName
+.p-3
+	.d-flex.justify-content-between
+		h1.thin.mb-3.animated.fadeInLeftBig#title= @categoryName
+		- if current_user
+			h1.add-following
+				img src="https://img.icons8.com/ios-glyphs/35/000000/add.png"
+			h1.remove-following
+				img src="https://img.icons8.com/ios/30/000000/ok.png"		
 .news
 	.articles.animated.fadeInUpBig
 		center
@@ -14,8 +19,42 @@
 									p.title= news['title']
 							div
 								a href="#{news['url']}" target="blank"
-									button.read= translate 'home.read'
-css:
-	.news{
-		margin-top: 200px !important;
-	}
+									button.button= translate 'home.read'
+javascript:
+	$(document).ready(function(){
+		let f = "#{@following.nil?}"
+		if (f == "true") {
+			$(".remove-following").hide()
+		}else {
+			$(".add-following").hide()
+		}
+	})
+	$(".add-following").click(function(){
+		let title = $("#title").text()
+		let request = new Request()
+		let url = `/add_following/${title}`
+		let successCallback = data => {
+			$(".add-following").hide()
+			$(".remove-following").show()
+			$(".remove-following").attr("id", data.id)
+		}
+		let errorCallback = (x,y,z) => {
+			console.log(x)
+		}
+		let response = request.get(url, successCallback, errorCallback)
+		return response
+	})
+	$(".remove-following").click(function() {
+		let following_id = $(this).attr("id")
+		let request = new Request()
+		let url = `/remove_following/${following_id}`
+		let successCallback = data => {
+			$(".add-following").show()
+			$(".remove-following").hide()
+		}
+		let errorCallback = (x,y,z) => {
+			console.log(x)
+		}
+		let response = request.get(url, successCallback, errorCallback)
+		return response
+	})
