@@ -2,7 +2,7 @@
 	.horizontal-bar.mt-5.mb-1
 	  	h1.ulta-thin Feres News
 	  	- if current_user
-	  		- if current_user.photo
+	  		- if current_user.photo.attached?
 	  			p= link_to profile_path
 	  				= image_tag(current_user.photo, width: 50, height: 50, style: "border-radius: 50%")	
 	  		- else
