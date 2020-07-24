@@ -26,6 +26,33 @@
 				div
 					a href="#{headlines[i]['url']}" target="blank"
 						button.button= translate 'home.read'
+/ For You .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+- if current_user
+	.news.mt-3.mb-1
+		.horizontal-bar
+			h2.thin.mb-2.animated.fadeInLeftBig Para Você
+		.mobile-gallery.gallery.js-flickity.pb-3#ForYouNewsMobile data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+			- current_user.following.count.times do |y|
+				- 10.times do |i|
+					.gallery-cell.article
+						div
+							a href="#{forYou[y][i]['url']}" target="blank"
+								img.thumb src="#{forYou[y][i]['urlToImage']}"
+								p.title= forYou[y][i]['title']
+						div
+							a href="#{forYou[y][i]['url']}" target="blank"
+								button.button= translate 'home.read'
+		.web-gallery.gallery.js-flickity.pb-3.animated.slideInRight#ForYouNewsDesktop data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+			- current_user.following.count.times do |y|
+				- 10.times do |i|
+					.gallery-cell.article
+						div
+							a href="#{forYou[y][i]['url']}" target="blank"
+								img.thumb src="#{forYou[y][i]['urlToImage']}"
+								p.title= forYou[y][i]['title']
+						div
+							a href="#{forYou[y][i]['url']}" target="blank"
+								button.button= translate 'home.read'
 / Economy .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 .news.mt-3.mb-1
 	.horizontal-bar

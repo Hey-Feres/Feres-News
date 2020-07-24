@@ -18,6 +18,11 @@ class HomeController < ApplicationController
 			@economyNews = HTTParty.get("https://newsapi.org/v2/everything?q=economy&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
 			@coronaNews = HTTParty.get("https://newsapi.org/v2/everything?q=covid&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
 			@politicaNews = HTTParty.get("https://newsapi.org/v2/everything?q=politica&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
+			if current_user
+				interests = current_user.following.map{ |f| f.title.downcase }
+				@forYou = Array.new
+				interests.map{ |interest| @forYou << HTTParty.get("https://newsapi.org/v2/everything?q=#{interest}&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")["articles"] }
+			end
 		end
 
 		def availableCategories

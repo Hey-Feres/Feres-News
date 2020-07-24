@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 	get "/categories", to: "news#categories"
 	get "/remove_following/:following_id", to: "user#remove_following"
 	get "/add_following/:category", to: "user#new_following"
+	get "/news/for_you", to: "news#for_you"
 
 	post "/search", to: "news#search"
 	post "/upload_photo", to: "user#upload_photo"

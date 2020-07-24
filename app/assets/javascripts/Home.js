@@ -55,6 +55,39 @@ class Home {
         let response = request.post(data,url,successCallback,errorCallback)
         return response
 	}
+
+	loadForYouNews(user_id){
+		let request = new Request()
+		let url = this.base_url + "/news/for_you"
+		let successCallback = data => {
+			console.log(data)
+			for (var i = data.length - 1; i >= 0; i--) {
+				for(var j = data[i].length - 1; j >= 0; j--){
+					let html =	`
+						<div class='gallery-cell article'>
+							<div>
+								<a href='${data[i][j]['url']}' target='blank'>
+									<img class='thumb' src='${data[i][j]['urlToImage']}'>
+									<p class='title'> ${data[i][j]['title']} </p>
+								</a>
+							</div>
+							<div>
+								<a href='${data[i][j]['url']}' target="blank">
+									<button class='button'> Leia </button>
+								</a>
+							</div>
+						</div>
+					`
+					$("#ForYouNewsDesktop").append(html)
+				}
+			}
+		}
+		let errorCallback = (a,b,c) => {
+			console.log(a)
+		}
+        let response = request.get(url,successCallback,errorCallback)
+        return response
+	}
 }
 
 

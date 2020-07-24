@@ -15,6 +15,12 @@ class NewsController < ApplicationController
 	def categories
 		
 	end
+	
+	def for_you
+		if current_user
+			render json: User.forYou(current_user.id)
+		end
+	end
 
 	def search
 		@news = searchNews(params[:date], params[:search_param])

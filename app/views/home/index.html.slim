@@ -17,18 +17,15 @@
 		div
 			h5.home-date= homeDate
 			h2= saudation
-= render "./home/news", headlines: @topHeadlines['articles'], economy: @economyNews['articles'], corona: @coronaNews['articles'], politica: @politicaNews['articles']
+= render "./home/news", headlines: @topHeadlines['articles'], economy: @economyNews['articles'], corona: @coronaNews['articles'], politica: @politicaNews['articles'], forYou: @forYou
 javascript:
 	$(document).ready(function(){
 		const base_url = "#{Rails.env}" == "development" ? "http://localhost:3000" : "http://feres-news.com"
 		home = new Home(base_url)
 		home.loaded()
-		$(".search").change(function(){
-			home.search( $(".search").val() )
-		})
-		$(".search-mobile").change(function(){
-			home.search( $(".search-mobile").val() )
-		})
+		if ("#{current_user}" != "") {
+			home.loadForYouNews("#{current_user.id}")
+		}
 	})
 
 
