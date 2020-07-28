@@ -1,16 +1,16 @@
 .bottom-nav	
 	p= link_to root_path
-		img src="https://img.icons8.com/ios-glyphs/40/999999/today-apps.png"
+		img.home-icon src=""
   	p= link_to categories_path
-    	img src="https://img.icons8.com/ios-glyphs/40/999999/albums.png"
+    	img.categories-icon src=""
   	- if current_user  	
   		- if current_user.photo.attached?
   			p= link_to profile_path
   				= image_tag(current_user.photo, width: 40, height: 40, style: "border-radius: 50%")
   		- else
   			p= link_to profile_path
-		    	img src="https://img.icons8.com/ios-filled/40/999999/user-male-circle.png"
+		    	img.profile-icon src=""
   	- else
   		p= link_to new_user_session_path
-		    img src="https://img.icons8.com/ios-filled/40/999999/user-male-circle.png"
+		    img.profile-icon src=""
 

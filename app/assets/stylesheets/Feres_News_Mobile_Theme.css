@@ -76,6 +76,15 @@
 	    display: flex;
 	    justify-content: space-between;		
 	}
+	.bottom-nav .home-icon{
+		content:url(https://img.icons8.com/ios-glyphs/40/999999/today-apps.png);
+	}
+	.bottom-nav .categories-icon{
+		content:url(https://img.icons8.com/ios-glyphs/40/999999/albums.png);
+	}
+	.bottom-nav .profile-icon{
+		content:url(https://img.icons8.com/ios-filled/40/999999/user-male-circle.png);
+	}
 	.todayNews{
 		background: #fff;
 		margin: 1%;
