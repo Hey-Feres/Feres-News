@@ -1,16 +1,16 @@
 .home-desktop
 	.horizontal-bar.mt-5.mb-1
-	  	h1.ulta-thin Feres News
+	  	h1.ulta-thin.brand Feres News
 	  	- if current_user
 	  		- if current_user.photo.attached?
 	  			p= link_to profile_path
 	  				= image_tag(current_user.photo, width: 50, height: 50, style: "border-radius: 50%")	
 	  		- else
 	  			p= link_to profile_path
-			    	img src="https://img.icons8.com/ios-filled/50/999999/user-male-circle.png"
+			    	img.user-profile src=""
 	  	- else
 	  		p= link_to new_user_session_path
-			    img src="https://img.icons8.com/ios-filled/50/999999/user-male-circle.png"
+			    img.user-profile src=""
 .home-mobile
 	/ Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 	.horizontal-bar.animated.fadeInLeftBig
@@ -24,25 +24,3 @@ javascript:
 		home = new Home(base_url)
 		home.loaded()
 	})
-
-
-css:
-	.gallery {
-		background: -webkit-linear-gradient(to bottom, #fff, #f2f2f2);
-		background: linear-gradient(to bottom, #fff, #f2f2f2);
-	}
-	.mobile-gallery .gallery-cell {
-	  	width: 77%;
-	  	margin: 0 5%;
-	  	counter-increment: gallery-cell;
-	}
-
-	.web-gallery .gallery-cell {
-	  	width: 20%;
-	  	margin: 0 1%;
-	  	counter-increment: gallery-cell;
-	}	
-	.home-date{
-		color: rgba(0,0,0,0.3)
-	}
-

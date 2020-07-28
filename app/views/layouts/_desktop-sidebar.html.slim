@@ -3,14 +3,14 @@
     .horizontal-bar.mt-3
       div
         h5.thin.home-date= homeDate
-        h2.thin= saudation
+        h2.thin.home-saudation= saudation
     .d-flex.justify-content-start.pl-3.pr-3.mt-5
-      p= link_to root_path, style: "color: #777777; text-decoration: none"
+      p= link_to root_path
         p.mr-1
-          img src="https://img.icons8.com/ios-glyphs/30/777777/today-apps.png"
+          img.sidebar-icon-home src=""
         p.ml-1 style="line-height: 30px;" Home
     .d-flex.justify-content-start.pl-3.pr-3
-      p= link_to categories_path, style: "color: #777777; text-decoration: none"
+      p= link_to categories_path
         p.mr-1
-          img src="https://img.icons8.com/ios-glyphs/30/777777/albums.png"
+          img.sidebar-icon-categories src=""
         p.ml-1 style="line-height: 30px;" Categorias

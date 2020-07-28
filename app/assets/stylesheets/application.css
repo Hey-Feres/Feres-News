@@ -17,12 +17,20 @@
 
 :root {
   	--primary: #111;
-	--secondary: #fff;
+	--secondary: #E6E6E6;
 	--shadow: #999;
-	--light-mode-background: #fff;
-	--dark-mode-background: #111111;
+	--light-body: rgb(255,255,255);
+	--light-sidebar-background: rgba(230,230,230,0.7);
+	--light-sidebar-shadow: rgba(0,0,0,.1);
+	/*Dark Mode*/
+	--dark-body: rgba(0,0,0, 1);
+	--dark-sidebar-background: rgba(34, 34, 34, 1);
+	--dark-sidebar-shadow: rgba(0,0,0,.4);
 }
-body{
-	padding-bottom: 10%;
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+body{ padding-top: 2%; margin-top: 10%; }
+.pointer{ cursor: pointer }
+.thin{ font-weight: 200 }
+.ulta-thin{ font-weight: 50 !important }

@@ -1,42 +1,66 @@
-.darkBody{
-	background-color: var(--dark-mode-background);
-	color: white;
+body{ background: #000 !important }
+h1,h2,h3,h4,h5,h6,p{
+	color: var(--secondary);
+	font-family: 'Noto Serif', serif;
 }
-.darkBody h1, .darkBody h2, .darkBody h3, .darkBody h4, .darkBody h5, .darkBody h6, .darkBody p{
-	color: white;
+/* Home Styles  .  .  .  .  .  .  .  .  .  .  .  .*/
+.darkBody .home-desktop .sidebar{
+	background: var(--dark-sidebar-background);
+   	-moz-box-shadow: inset 0 0 10px var(--dark-sidebar-shadow);
+   	-webkit-box-shadow: inset 0 0 10px var(--dark-sidebar-shadow);
+   	box-shadow: inset 0 0 10px var(--dark-sidebar-shadow);
 }
-.darkBody .Sign{
-	box-shadow: 1px 5px 15px 1px var(--primary)
+.main{
+	position: absolute;
+	top: 0;
+	left: 18%;
+	z-index: 99;
+	height: 100%;
+	width: 82%;	
+	background-color: var(--dark-body) !important;
 }
-.darkBody .categories a, .darkBody .categories-mobile a {
-	color: white !important;
+.home-date{
+	color: var(--secondary) !important
 }
-.darkBody .category{
-	box-shadow: 1px 5px 15px 1px var(--primary)
+.home-saudation{
+	color: var(--secondary) !important	
 }
-.darkBody .category:hover{
-	box-shadow: 1px 5px 20px 1px var(--primary)
+.sidebar a{
+	color: var(--secondary) !important;
 }
-.darkBody .article .read{
-	box-shadow: 0px 1px 10px 1px transparent
+.sidebar-icon-categories{
+	content:url(https://img.icons8.com/ios-glyphs/30/E6E6E6/albums.png) !important;
 }
-.darkBody .article{
-	background: #000;
-	box-shadow: 0 0 0 0 transparent;
+.sidebar-icon-home{
+	content:url(https://img.icons8.com/ios-glyphs/30/E6E6E6/today-apps.png) !important;
 }
-.darkBody .article a {
-	color: white;
+.user-profile{
+	content:url(https://img.icons8.com/ios-filled/50/E6E6E6/user-male-circle.png) !important;
 }
-.darkBody .search, .darkBody .search-mobile{
-	background-color: #000;
-	color: white;
+/* Articles Styles .  .  .  .  .  .  .  .  .  .  .*/
+.gallery {
+	background: -webkit-linear-gradient(to bottom, #000, #111) !important;
+	background: linear-gradient(to bottom, #000, #111) !important;
 }
-.darkBody .Auth{
-	background: #111;
+.horizontal-bar h2,
+.horizontal-bar .brand{
+	color: var(--secondary);
 }
-.darkBody .Auth .box{
-	box-shadow: 0 0 10px 5px transparent;
+.article{
+	background: black !important;
 }
-.darkBody .cover{
-	box-shadow: 1px 5px 15px 1px var(--primary)
+.article p{
+	color: var(--secondary) !important;
+}
+.button {
+	background: var(--secondary) !important;
+  	color: #000 !important;
+  	box-shadow: 1px 5px 15px 3px transparent !important;
+}
+/* Categories Styles .  .  .  .  .  .  .  .  .  .  .*/
+.desktop-categories h1{
+	color: var(--secondary)
+}
+.category #title{
+	color: var(--secondary)	
 }
