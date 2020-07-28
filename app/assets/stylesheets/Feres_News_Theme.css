@@ -1,3 +1,4 @@
+body{ background: #fff !important }
 h1,h2,h3,h4,h5,h6,p{
 	color: #333;
 	font-family: 'Noto Serif', serif;
@@ -124,6 +125,16 @@ h1,h2,h3,h4,h5,h6,p{
 .button:hover{
 	box-shadow: 1px 5px 15px 3px transparent;
 }
+.downloadPwa .section{
+	background: -webkit-linear-gradient(to bottom, #222, #000);
+	background: linear-gradient(to bottom, #222, #000);
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 7% 0;
+}
 /*Categories*/
 .desktop-categories .square{
 	width: 100%;
@@ -219,14 +230,4 @@ h1,h2,h3,h4,h5,h6,p{
 	background: #33cc33;
 	background: -webkit-linear-gradient(150deg, #33cc33, #248f24);
 	background: linear-gradient(150deg, #33cc33, #248f24);
-}
-.downloadPwa .section{
-	background: -webkit-linear-gradient(to bottom, #222, #000);
-	background: linear-gradient(to bottom, #222, #000);
-	height: 300px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	padding: 7% 0;
 }

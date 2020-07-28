@@ -1,4 +1,4 @@
-body{ background: #000 !important }
+.darkBody{ background: #000 !important }
 h1,h2,h3,h4,h5,h6,p{
 	color: var(--secondary);
 	font-family: 'Noto Serif', serif;
@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6,p{
    	-webkit-box-shadow: inset 0 0 10px var(--dark-sidebar-shadow);
    	box-shadow: inset 0 0 10px var(--dark-sidebar-shadow);
 }
-.main{
+.darkBody .main{
 	position: absolute;
 	top: 0;
 	left: 18%;
@@ -19,48 +19,48 @@ h1,h2,h3,h4,h5,h6,p{
 	width: 82%;	
 	background-color: var(--dark-body) !important;
 }
-.home-date{
+.darkBody .home-date{
 	color: var(--secondary) !important
 }
-.home-saudation{
+.darkBody .home-saudation{
 	color: var(--secondary) !important	
 }
-.sidebar a{
+.darkBody .sidebar a{
 	color: var(--secondary) !important;
 }
-.sidebar-icon-categories{
+.darkBody .sidebar-icon-categories{
 	content:url(https://img.icons8.com/ios-glyphs/30/E6E6E6/albums.png) !important;
 }
-.sidebar-icon-home{
+.darkBody .sidebar-icon-home{
 	content:url(https://img.icons8.com/ios-glyphs/30/E6E6E6/today-apps.png) !important;
 }
-.user-profile{
+.darkBody .user-profile{
 	content:url(https://img.icons8.com/ios-filled/50/E6E6E6/user-male-circle.png) !important;
 }
 /* Articles Styles .  .  .  .  .  .  .  .  .  .  .*/
-.gallery {
+.darkBody .gallery {
 	background: -webkit-linear-gradient(to bottom, #000, #111) !important;
 	background: linear-gradient(to bottom, #000, #111) !important;
 }
-.horizontal-bar h2,
-.horizontal-bar .brand{
+.darkBody .horizontal-bar h2,
+.darkBody .horizontal-bar .brand{
 	color: var(--secondary);
 }
-.article{
+.darkBody .article{
 	background: black !important;
 }
-.article p{
+.darkBody .article p{
 	color: var(--secondary) !important;
 }
-.button {
+.darkBody .button {
 	background: var(--secondary) !important;
   	color: #000 !important;
   	box-shadow: 1px 5px 15px 3px transparent !important;
 }
 /* Categories Styles .  .  .  .  .  .  .  .  .  .  .*/
-.desktop-categories h1{
+.darkBody .desktop-categories h1{
 	color: var(--secondary)
 }
-.category #title{
+.darkBody .category #title{
 	color: var(--secondary)	
 }
