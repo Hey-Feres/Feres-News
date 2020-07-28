@@ -26,8 +26,20 @@
 				div
 					a href="#{headlines[i]['url']}" target="blank"
 						button.button= translate 'home.read'
+/ Offers PWA  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+/.downloadPwa
+	.section
+		div
+			center
+				= image_tag("Logo.png", width: "150")
+			h4.text-white.text-center Adote o Feres News como seu app de Notícias
+		
+		link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png"
+		button.button.button-white Add to Home Screen
+	/.horizontal-bar
+		h2.thin.mb-2.animated.fadeInLeftBig
 / For You .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-- if current_user
+/ - if current_user
 	.news.mt-3.mb-1
 		.horizontal-bar
 			h2.thin.mb-2.animated.fadeInLeftBig Para Você

@@ -10,6 +10,9 @@
 .mobile-categories{
 	display: none;
 }
+.downloadPwa{
+	display: none;	
+}
 /* Mobile Adapted Styles .  .  .  .  .  .  .  .  .  .*/
 @media only screen and (max-width: 600px) {
 	body {
@@ -118,5 +121,8 @@
 	}
 	.desktop-categories{
 		display: none;
+	}
+	.downloadPwa{
+		display: block;
 	}
 }
