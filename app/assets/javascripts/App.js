@@ -7,4 +7,5 @@ class App {
 	switchToLightMode(){
 		$("body").removeClass("darkBody")
 	}
+	
 }

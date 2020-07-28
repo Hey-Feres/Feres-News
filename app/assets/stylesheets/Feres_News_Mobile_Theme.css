@@ -134,4 +134,20 @@
 	.downloadPwa{
 		display: block;
 	}
+	/* Bottom Nav Dark Mode */
+	.darkBody .bottom-nav{
+		background: rgba(0,0,0,0.9) !important;
+	}
+	.darkBody .bottom-nav .home-icon{
+		content:url(https://img.icons8.com/ios-glyphs/40/E6E6E6/today-apps.png);
+	}
+	.darkBody .bottom-nav .categories-icon{
+		content:url(https://img.icons8.com/ios-glyphs/40/E6E6E6/albums.png);
+	}
+	.darkBody .bottom-nav .profile-icon{
+		content:url(https://img.icons8.com/ios-filled/40/E6E6E6/user-male-circle.png);
+	}
+	.darkBody .mobile-categories h1{
+		color: var(--secondary);
+	}
 }

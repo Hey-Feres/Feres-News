@@ -64,16 +64,3 @@ h1,h2,h3,h4,h5,h6,p{
 .darkBody .category #title{
 	color: var(--secondary)	
 }
-/* Bottom Nav */
-.bottom-nav{
-	background: rgba(0,0,0,0.9) !important;
-}
-.bottom-nav .home-icon{
-	content:url(https://img.icons8.com/ios-glyphs/40/E6E6E6/today-apps.png);
-}
-.bottom-nav .categories-icon{
-	content:url(https://img.icons8.com/ios-glyphs/40/E6E6E6/albums.png);
-}
-.bottom-nav .profile-icon{
-	content:url(https://img.icons8.com/ios-filled/40/E6E6E6/user-male-circle.png);
-}
