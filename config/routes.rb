@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+	
+	mount Pwa::Engine, at: ''
+
  	devise_for :users
   	
   	get "/profile", to: "user#index"

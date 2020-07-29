@@ -133,9 +133,16 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.1)
+    mozaic (2.0.1)
+      activesupport (>= 5.0)
+      nestive-rails (~> 1.0)
+      railties (>= 5.0)
     msgpack (1.3.3)
     multi_xml (0.6.0)
     mysql2 (0.5.3)
+    nestive-rails (1.0.2)
+      actionview (>= 5.0)
+      railties (>= 5.0)
     net-scp (2.0.0)
       net-ssh (>= 2.6.5, < 6.0.0)
     net-ssh (5.2.0)
@@ -145,6 +152,9 @@ GEM
     orm_adapter (0.5.0)
     public_suffix (4.0.5)
     puma (3.12.6)
+    pwa (4.0.6)
+      mozaic (~> 2.0)
+      railties (>= 5.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -269,6 +279,7 @@ DEPENDENCIES
   mini_magick
   mysql2
   puma (~> 3.11)
+  pwa
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
   selenium-webdriver

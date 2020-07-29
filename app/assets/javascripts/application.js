@@ -12,7 +12,12 @@
 //
 //= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap
+//= require pwa-rails/src/index
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener('turbolinks:load', () => {
+	const progressiveWebApp = new ProgressiveWebApp();
+})
