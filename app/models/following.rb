@@ -1,6 +1,8 @@
 class Following < ApplicationRecord
 	belongs_to :user
-
+	
+	scope :search, -> title { where("title LIKE ?", title) }
+	
 	def self.add user_id, title
 		following = Following.create!(user_id: user_id, title: title)
 		if following

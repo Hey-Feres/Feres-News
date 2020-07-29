@@ -21,6 +21,9 @@
 javascript:
 	$(document).ready(function(){
 		const base_url = "#{Rails.env}" == "development" ? "http://localhost:3000" : "http://feres-news.com"
-		home = new Home(base_url)
+		let home = new Home(base_url)
 		home.loaded()
+		// 
+		let news = new News
+		news.buildNewsCarousel()
 	})

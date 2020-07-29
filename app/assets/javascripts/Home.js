@@ -2,11 +2,11 @@ class Home {
 	constructor(base_url) {
 		this.base_url = base_url;
 	}
-
+	// 
 	loaded(){
 		$(".AboutFeresNews").hide()
 	}
-
+	// 
 	search(params){
 		$(".categories-mobile").html("")
 		$(".news").html("")
@@ -55,7 +55,7 @@ class Home {
         let response = request.post(data,url,successCallback,errorCallback)
         return response
 	}
-
+	//
 	loadForYouNews(user_id){
 		let request = new Request()
 		let url = this.base_url + "/news/for_you"
@@ -89,5 +89,3 @@ class Home {
         return response
 	}
 }
-
-
