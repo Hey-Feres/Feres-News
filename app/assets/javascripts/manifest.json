@@ -1,0 +1,22 @@
+{
+  "short_name": "Feres News",
+  "name": "Feres News",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "description": "",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "pt-BR",
+  "icons": [{
+    "src": "https://github.com/Hey-Feres/Feres-News/blob/master/app/assets/images/Logo.png",
+    "sizes": "70x70",
+    "type": "image/png"
+  }, {
+    "src": "https://github.com/Hey-Feres/Feres-News/blob/master/app/assets/images/Logo.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+}

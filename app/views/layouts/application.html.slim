@@ -1,13 +1,28 @@
 doctype html
 html
   head
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta name="apple-mobile-web-app-capable" content="yes"
+    / 
     title News
     = csrf_meta_tags
     = csp_meta_tag
+    / 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    / Icons
+    link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"
+    = favicon_link_tag "apple-touch-icon-57x57.png", rel: "apple-touch-icon", sizes: "57x57", type: "image/png"
+    = favicon_link_tag "apple-touch-icon-72x72.png", rel: "apple-touch-icon", sizes: "72x72", type: "image/png"
+    = favicon_link_tag "apple-touch-icon-76x76.png", rel: "apple-touch-icon", sizes: "76x76", type: "image/png"
+    = favicon_link_tag "apple-touch-icon-114x114.png", rel: "apple-touch-icon", sizes: "114x114", type: "image/png"
+    = favicon_link_tag "apple-touch-icon-120x120.png", rel: "apple-touch-icon", sizes: "120x120", type: "image/png"
+    = favicon_link_tag "apple-touch-icon-144x144.png", rel: "apple-touch-icon", sizes: "144x144", type: "image/png"
+    = favicon_link_tag "apple-touch-icon-152x152.png", rel: "apple-touch-icon", sizes: "152x152", type: "image/png"
+    = favicon_link_tag "apple-touch-icon-180x180.png", rel: "apple-touch-icon", sizes: "180x180", type: "image/png"
+    / 
+    link rel="manifest" href="/manifest.json"
   body
     = render 'layouts/desktop-sidebar'
     .main
