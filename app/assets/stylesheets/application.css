@@ -28,9 +28,15 @@
 	--dark-sidebar-shadow: rgba(0,0,0,.4);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');*/
 
-body{ padding-top: 2%; margin-top: 10%; }
+body{ 
+	padding-top: 2%; 
+	margin-top: 10%;
+}
+h1,h2,h3,h4,h5,h6,p,a,span,label{
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
 .pointer{ cursor: pointer }
 .thin{ font-weight: 200 }
 .ulta-thin{ font-weight: 50 !important }

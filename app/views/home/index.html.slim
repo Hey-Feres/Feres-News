@@ -11,55 +11,53 @@
 	  	- else
 	  		p= link_to new_user_session_path
 			    img.user-profile src=""
-	.row.ml-3.mr-3
-		.col-8
-			.row
-				.col-6
-					.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][0]['urlToImage']}'); background-size: cover; background-position: center center;"
-						.blurred-bottom
-							h4.m-2.text-white= @topHeadlines['articles'][0]['title']
-				.col-6
-					.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][1]['urlToImage']}'); background-size: cover; background-position: center center;"
-						.blurred-bottom
-							h4.m-2.text-white= @topHeadlines['articles'][1]['title']
-		.col-4
-			.row
-				.col-12.mb-4
-					.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][2]['urlToImage']}'); background-size: cover; background-position: center center;"
-						.blurred-bottom
-							p.m-2.text-white= @topHeadlines['articles'][2]['title']
-				.col-12.mb-4
-					.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][3]['urlToImage']}'); background-size: cover; background-position: center center;"
-						.blurred-bottom
-							p.m-2.text-white= @topHeadlines['articles'][3]['title']
 	.news.mt-1.mb-1
 		.horizontal-bar
-			h2.thin.animated.fadeInLeftBig Hoje
-			/p.text-primary.thin.animated.fadeInRightBig
-			/h2= link_to today_path do
-				img.animated.bounceIn src="https://img.icons8.com/ios-glyphs/35/000000/connection-status-off.png"
-		.mobile-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
-			- 7.times do |i|
-				.gallery-cell.article
-					div
-						a href="#{@topHeadlines['articles'][i+4]['url']}" target="blank"
-							img.thumb src="#{@topHeadlines['articles'][i+4]['urlToImage']}"
-							p.title= @topHeadlines['articles'][i+4]['title']
-					div
-						a href="#{@topHeadlines['articles'][i+4]['url']}" target="blank"
-							button.button= translate 'home.read'		
-		/.col-8
-			.row
-				.col-12.mb-4
-					.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][4]['urlToImage']}'); background-size: cover; background-position: center center;"
-				.col-12.mb-4
-					.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][5]['urlToImage']}'); background-size: cover; background-position: center center;"
-		/.col-4
-			.row
-				.col-12.mb-2
-					.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][6]['urlToImage']}'); background-size: cover; background-position: center center;"
-						.blurred-bottom
-							h4.m-2.text-white= @topHeadlines['articles'][6]['title']
+			h2.thin.animated.fadeInLeftBig Hoje	
+		.row.ml-3.mr-3
+			.col-8
+				.row
+					.col-6
+						.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][0]['urlToImage']}'); background-size: cover; background-position: center center;"
+							.blurred-bottom
+								h4.m-2.text-white= @topHeadlines['articles'][0]['title']
+					.col-6
+						.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][1]['urlToImage']}'); background-size: cover; background-position: center center;"
+							.blurred-bottom
+								h4.m-2.text-white= @topHeadlines['articles'][1]['title']
+			.col-4
+				.row
+					.col-12.mb-4
+						.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][2]['urlToImage']}'); background-size: cover; background-position: center center;"
+							.blurred-bottom
+								p.m-2.text-white= @topHeadlines['articles'][2]['title']
+					.col-12.mb-4
+						.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][3]['urlToImage']}'); background-size: cover; background-position: center center;"
+							.blurred-bottom
+								p.m-2.text-white= @topHeadlines['articles'][3]['title']		
+		.row.ml-3.mr-3
+				.col-4
+					.row
+						.col-12.mb-4
+							.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][4]['urlToImage']}'); background-size: cover; background-position: center center;"
+								.blurred-bottom
+									p.m-2.text-white= @topHeadlines['articles'][4]['title']
+						.col-12.mb-4
+							.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][5]['urlToImage']}'); background-size: cover; background-position: center center;"
+								.blurred-bottom
+									p.m-2.text-white= @topHeadlines['articles'][5]['title']
+				.col-8
+					.row
+						.col-6
+							.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][6]['urlToImage']}'); background-size: cover; background-position: center center;"
+								.blurred-bottom
+									h4.m-2.text-white= @topHeadlines['articles'][6]['title']
+						.col-6
+							.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][7]['urlToImage']}'); background-size: cover; background-position: center center;"
+								.blurred-bottom
+									h4.m-2.text-white= @topHeadlines['articles'][7]['title']
+
+
 .home-mobile
 	/ Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
 	.horizontal-bar.animated.fadeInLeftBig
