@@ -1,29 +1,15 @@
 class HomeController < ApplicationController
+	
+	# Modules
+	include NewsGenius
+
+	# Actions
+
 	def index
-		getNews
-		availableCategories
-		locale
+		@highlights = NewsGenius.highlights
 	end
 
 	private
-		def locale
-			@locale = {
-				flag: @language == "en" ? "brazil" : "usa",
-				path: @language == "en" ? "#{request.path}?locale=pt-BR" : "#{request.path}?locale=en"
-			}
-		end
-
-		def getNews
-			@topHeadlines = HTTParty.get("https://newsapi.org/v2/top-headlines?country=br&apiKey=#{Rails.application.credentials.news_api_key}")
-			@economyNews = HTTParty.get("https://newsapi.org/v2/everything?q=economy&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
-			@coronaNews = HTTParty.get("https://newsapi.org/v2/everything?q=covid&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
-			@politicaNews = HTTParty.get("https://newsapi.org/v2/everything?q=politica&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")
-			if current_user
-				interests = current_user.following.map{ |f| f.title.downcase }
-				@forYou = Array.new
-				interests.map{ |interest| @forYou << HTTParty.get("https://newsapi.org/v2/everything?q=#{interest}&sortBy=popularity&language=#{@language}&apiKey=#{Rails.application.credentials.news_api_key}")["articles"] }
-			end
-		end
 
 		def availableCategories
 			@categories = [

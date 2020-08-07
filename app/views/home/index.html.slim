@@ -11,111 +11,33 @@
 	  	- else
 	  		p= link_to new_user_session_path
 			    img.user-profile src=""
-	.news.mt-1.mb-1
-		.horizontal-bar
-			h2.thin.animated.fadeInLeftBig Hoje	
-		.row.ml-3.mr-3
-			.col-8
-				.row
-					.col-6
-						.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][0]['urlToImage']}'); background-size: cover; background-position: center center;"
-							.blurred-bottom
-								h4.m-2.text-white= @topHeadlines['articles'][0]['title']
-					.col-6
-						.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][1]['urlToImage']}'); background-size: cover; background-position: center center;"
-							.blurred-bottom
-								h4.m-2.text-white= @topHeadlines['articles'][1]['title']
-			.col-4
-				.row
-					.col-12.mb-4
-						.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][2]['urlToImage']}'); background-size: cover; background-position: center center;"
-							.blurred-bottom
-								p.m-2.text-white= @topHeadlines['articles'][2]['title']
-					.col-12.mb-4
-						.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][3]['urlToImage']}'); background-size: cover; background-position: center center;"
-							.blurred-bottom
-								p.m-2.text-white= @topHeadlines['articles'][3]['title']		
-		.row.ml-3.mr-3
-				.col-4
-					.row
-						.col-12.mb-4
-							.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][4]['urlToImage']}'); background-size: cover; background-position: center center;"
-								.blurred-bottom
-									p.m-2.text-white= @topHeadlines['articles'][4]['title']
-						.col-12.mb-4
-							.home-top-box.home-top-box-sm style="background: url('#{@topHeadlines['articles'][5]['urlToImage']}'); background-size: cover; background-position: center center;"
-								.blurred-bottom
-									p.m-2.text-white= @topHeadlines['articles'][5]['title']
-				.col-8
-					.row
-						.col-6
-							.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][6]['urlToImage']}'); background-size: cover; background-position: center center;"
-								.blurred-bottom
-									h4.m-2.text-white= @topHeadlines['articles'][6]['title']
-						.col-6
-							.home-top-box.home-top-box-lg style="background: url('#{@topHeadlines['articles'][7]['urlToImage']}'); background-size: cover; background-position: center center;"
-								.blurred-bottom
-									h4.m-2.text-white= @topHeadlines['articles'][7]['title']
+/ Headlines .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+.news.mt-1.mb-1
+  .horizontal-bar
+    h2.thin.animated.fadeInLeftBig Hoje
+  .mobile-gallery.gallery.js-flickity.pb-3 data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+    - @highlights.each  do |highlight|
+      .gallery-cell.article
+        div
+          a href="#{highlight['url']}" target="blank"
+            img.thumb src="#{highlight['urlToImage']}"
+            p.title= highlight['title']
+        div
+          a href="#{highlight['url']}" target="blank"
+            button.button= translate 'home.read'
 
+  .web-gallery.gallery.js-flickity.pb-3.animated.slideInLeft data-flickity-options='{ "wrapAround": true, "prevNextButtons": false, "pageDots": false }'
+    - @highlights.each  do |highlight|
+      .gallery-cell.article
+        div
+          a href="#{highlight['url']}" target="blank"
+            img.thumb src="#{highlight['urlToImage']}"
+            p.title= highlight['title']
+        div
+          a href="#{highlight['url']}" target="blank"
+            button.button= translate 'home.read'
+/ 
+.news.mt-1.mb-1
+  .horizontal-bar
+    h2.thin.animated.fadeInLeftBig Economia
 
-.home-mobile
-	/ Saudation .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
-	.horizontal-bar.animated.fadeInLeftBig
-		div
-			h5.home-date= homeDate
-			h2= saudation
-/ = render "./home/news", headlines: @topHeadlines['articles'], economy: @economyNews['articles'], corona: @coronaNews['articles'], politica: @politicaNews['articles'], forYou: @forYou
-javascript:
-	$(document).ready(function(){
-		const base_url = "#{Rails.env}" == "development" ? "http://localhost:3000" : "http://feres-news.com"
-		home = new Home(base_url)
-		home.loaded()
-	})
-
-
-css:
-	.home-top-box{
-		background: white;
-		width: 100%;
-		box-shadow: 0 0 10px 5px #f2f2f2;
-		border-radius: 20px;
-		overflow: hidden;
-	}
-	.home-top-box-lg{
-		height: 425px;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-	}
-	.home-top-box-sm{
-		height: 200px;
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
-	}
-	.home-top-box-lg .blurred-bottom{
-		backdrop-filter: blur(30px);
-		-moz-backdrop-filter: blur(30px);
-		-webkit-backdrop-filter: blur(30px);
-		-o-backdrop-filter: blur(30px);
-		width: 100%;
-		height: 150px;
-		border-bottom-right-radius: 20px;
-		border-bottom-left-radius: 20px;
-		background: rgba(0,0,0,0.5)
-	}
-	.blurred-bottom h4, p{
-		font-weight: 200 !important;
-		text-align: center;
-	}
-	.home-top-box-sm .blurred-bottom{
-		backdrop-filter: blur(30px);
-		-moz-backdrop-filter: blur(30px);
-		-webkit-backdrop-filter: blur(30px);
-		-o-backdrop-filter: blur(30px);
-		width: 40%;
-		height: 200px;
-		border-top-right-radius: 20px;
-		border-bottom-right-radius: 20px;
-		background: rgba(0,0,0,0.5)
-	}
