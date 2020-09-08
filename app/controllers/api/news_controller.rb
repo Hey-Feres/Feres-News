@@ -1,24 +1,25 @@
 module Api
-	
-	## News Requests will be processed here
+
+    GNEWS_API_BASE_URL = "https://gnews.io/api/v3"
+    GNEWS_API_TOKEN = "8f39ec59b3aa7dedc4bfadd6d5c37649"
+
 	class NewsController < ActionController::API
-		
-		# Modules
-		include NewsGenius
 
-		# Actions
+        def today
+            news = HTTParty.get("#{GNEWS_API_BASE_URL}/top-news?lang=pt-BR&country=br&token=#{GNEWS_API_TOKEN}")
+            render json: news
+        end
 
-		def highlights
-			@highlights = NewsGenius.highlights
-			render json: @highlights
-		end
+        def topic
+            news = HTTParty.get("#{GNEWS_API_BASE_URL}/topics/#{params[:topic]}?lang=pt-BR&country=br&token=#{GNEWS_API_TOKEN}")
+            render json: news
+        end
 
-		## Search Request Handler
-		def search
-			@news_founded = NewsGenius.search(params[:params])
-			render json: @news_founded
-		end
+        def search
+            news = HTTParty.get("#{GNEWS_API_BASE_URL}/search?q=#{params[:query]}&lang=pt-BR&country=br&token=#{GNEWS_API_TOKEN}")
+            render json: news
+        end
 
-	end
+    end
 
 end
